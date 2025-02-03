@@ -40,7 +40,7 @@ author: IS
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+copyright: "Unpublished Work (cleft) {currentYear} by Catch Cadre"
 
 description: >- # this means to ignore newlines until "baseurl:"
   [Under Construction] This is the website for Islam Salahuddin, a data consultant, analyst and Microsoft Certified Trainer,
