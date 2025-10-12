@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - Unit 7</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../../../msc-ai/ml/ml.html">Machine Learning</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Machine Learning - Unit 7: Introduction to Artificial Neural Networks</h1>
+    </section>
+    <section class="card">
+      <h2>Overview</h2>
+        <p>Artificial Neural Network (ANN) is a biology inspired algorithm that, like animal brain, can learn from the environment and adapt itself to make more correct decisions. At present, ANN and its variant algorithm is used widely in different areas of our lives, from marketing to automation. ANN is a key driver for the industry 4.0 revolution, where machines are making decisions with minimal or no human interactions.</p>
+    </section>
+    <section class="card">
+      <h2>My Reflection</h2>
+        <p>Starting this week, things became more interesting for me, as I had no previous experience with deep learning and ANNs. The unit's materials included a general lecturecast, which was not very useful as usual, in addition to a list of readings. One of the readings were about activation functions in neural networks, which are essential components in neural networks that introduce non-linearity into the model, allowing it to learn complex patterns beyond linear relationships. They determine whether a neuron should be activated based on its input, enabling the network to approximate intricate functions. Common activation functions include ReLU (Rectified Linear Unit), which outputs zero for negative inputs and the input itself for positive values, offering computational efficiency and sparse activation; Sigmoid, which maps inputs to a range between 0 and 1, useful for probabilistic outputs; and Tanh, which centers outputs around zero for better gradient flow. The choice of activation function significantly impacts training dynamics, convergence speed, and model expressiveness.</p>      
+        <p>To be able to better understand deep learning and ANNs, I started a series of separate courses on DataCamp, which I would continue until I become able to implement and submit my individual assignment which is expected to be submitted by the end of Unit 11.</p>
+        <p>The assignment requires each student to develop and present a 20-minute recorded analysis of an object recognition model trained on the CIFAR-10 dataset, using one of three assigned machine learning tracks: classical ML (e.g., SVM/KNN with feature engineering), deep learning (CNNs with transfer learning), or advanced ML (self-supervised learning and neural architecture search). However, the module's tutor advised us to only depend on deep learning and CNNs. This was good news to me as I had no previous experience with it as I've mentioned, and it is also the next thing that I was looking forward to learning. In addition, students must justify their model design choices, evaluate performance across training, validation, and test sets, and critically discuss the strengths and trade-offs of their approach. The presentation should include visuals, performance metrics, and a demonstration of the model, accompanied by a transcript. This assessment counts for 40% of the final module grade and emphasizes clarity, critical analysis, and effective communication.</p>
+        <p>I spent some time exploring the different relevant courses on DataCamp, focusing on what would be most relevant to get me ready to implement the individual assignment. Since this was a new topic for me, I started few courses until I realised that they were not the shortest path to my goal. Eventually, I found a deep learning track that has an introductory course and intermediate course, which would be enough to give the fundamental hands-on skills to implement a CNN model as required for the assignent.</p>
+        <p>In addition, the unit included a formative activity of running three Jupyter notebooks showing the basics of ANNs. Again, I find this kind of activities not very useful and not engaging as well.</p>
+      </section>
+    <section class="content">
+      <h2>Artefacts: Perceptron Activity Notebooks</h2>
+      <h3>Introduction</h3>
+      <p>These three notebooks provide a practical introduction to neural networks, starting from the basics and progressing to more advanced concepts. The first notebook demonstrates how a simple perceptron operates using NumPy for efficient computation. The second notebook builds on this by training a perceptron to learn the logical AND operator, illustrating supervised learning and weight adjustment. The third notebook introduces the multi-layer perceptron, showing how adding hidden layers and using the sigmoid activation function enables the network to solve more complex problems like the XOR operator. Together, these notebooks offer a step-by-step exploration of neural network fundamentals and their implementation in Python.</p>
+      <h3>1. Unit07 Ex1 simple_perceptron.ipynb</h3>
+      <p>This notebook introduces the concept of a simple perceptron, a basic neural network unit. It demonstrates how to use NumPy arrays to represent inputs and weights, calculates the weighted sum, and applies a step activation function to produce binary outputs. The notebook shows how changing input values and weights affects the perceptron's output, laying the foundation for understanding neural network decision boundaries.</p>
+      <h3>2. Unit07 Ex2 perceptron_AND_operator.ipynb</h3>
+      <p>This notebook builds on the simple perceptron by implementing it to learn the logical AND operator. It defines inputs, outputs, and weights, and uses a step function for activation. The notebook includes a training loop that updates weights based on errors until the perceptron correctly classifies all inputs. After training, the perceptron can classify new instances, demonstrating supervised learning and weight adjustment.</p>
+      <h3>3. Unit07 Ex3 multi_layer_perceptron.ipynb</h3>
+      <p>This notebook extends the perceptron concept to a multi-layer perceptron (MLP), capable of solving more complex problems like the XOR operator. It introduces the sigmoid activation function and its derivative, defines input, output, and weight matrices for both hidden and output layers, and implements forward and backward propagation. The notebook shows how to train the MLP using multiple epochs, visualize error reduction, and use the trained network for predictions, illustrating the power of deep learning architectures.</p>
+      <h3>Summary</h3>
+      <p>The three notebooks progress from a simple perceptron to a multi-layer perceptron, demonstrating key neural network concepts: input/weight representation, activation functions, supervised learning, weight updates, and the ability of MLPs to solve non-linear problems.</p>
+      <br>
+      <h2>Artefacts: Introduction to Deep Learning with PyTorch - DataCamp Course</h2>
+      <p>In this week, I completed my first introductory course to deep learning. It introduced my to PyTorch library, the neural networks architecture and the basics of training, evaluating and improving neural network models with PyTorch.</p>
+      <div class="image-wrapper">
+        <img src="..\images\intro-to-deep-learning-datacamp.png" alt="DataCamp Course: Introduction to Deep Learning with PyTorch Certificate" class="embedded-image">
+        <p class="image-caption">DataCamp Course: Introduction to Deep Learning with PyTorch Certificate</p>
+      </div>
+    </section>  
+    <section class="navbarcont">
+      <nav>
+        <a href="ml-unit8.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

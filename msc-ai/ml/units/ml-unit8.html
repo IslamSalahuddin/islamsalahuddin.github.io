@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - Unit 8</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../../../msc-ai/ml/ml.html">Machine Learning</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Machine Learning - Unit 8: Training an Artificial Neural Network</h1>
+    </section>
+    <section class="card">
+      <h2>Overview</h2>
+        <p>Last week, we learned about the structure of human neuron and how that influenced the development of artificial neural network (ANN), its structure and how it works. We will continue with the example of ANN discussed last week.</p>
+    </section>
+    <section class="card">
+      <h2>My Reflection</h2>
+        <p>This week was a bit dense, as it had a lot of materials to cover, in addition to my parallel learning for how to understand and implement a CNN model as required for the individual assignment.</p>
+        <p>The unit covered training of ANNs, especially the concepts of backpropagation and updating weights, which were covered by the unit's lecturecast, as well as<a href="https://www.kdnuggets.com/2017/10/neural-network-foundations-explained-gradient-descent.html">one of the readings. </a>
+          In ANNs, updating weights through gradient descent and backpropagation is the core mechanism for learning. During training, the network computes a loss that quantifies prediction error. 
+          Backpropagation then calculates the gradient of this loss with respect to each weight by propagating errors backward from the output layer to earlier layers. 
+          Gradient descent uses these gradients to adjust the weights in the direction that minimises the loss—typically by subtracting a scaled version of the gradient, 
+          controlled by a learning rate. This iterative process enables the network to fine-tune its parameters, gradually improving accuracy and generalization across training epochs.</p>
+        <p>
+          <a href="https://www.nature.com/articles/d41586-021-00530-0">Another reading </a>also introduced the debate on using generative aritificial intelligence (AI) for writing, and whether what AI writes is equivalent to the writing of humans.
+          This was an essential reading for the second collaborative discussion, which started in this unit. In the artefacts below, I included my initial post that I contributed with to the discussion. 
+        </p>
+        <p>
+          As a final note, the unit also included a seminar, in which we were presented with the basics of ANNs and their applications. 
+          And in parallel, I continued my learning on DataCamp, and viewed several other sources that were helpful to me in understanding deep learning and CNNs. I include one of the 
+          examples below in the artefacts section as well.
+        </p>   
+      </section>
+    <section class="content">
+      <h2>Artefacts - Collaborative Discussion 2: Legal and Ethical Views on ANN Applications</h2>
+      <h3>Initial Post - 'Robo writers' are tools, and tools augment not replace</h3>
+      
+        <p>
+          The rise of AI language models like GPT-3, as discussed by Hutson (2021), marks a transformative moment in how text is generated across domains, from administrative tasks to creative writing. These models, trained on vast corpora and powered by billions of parameters, offer unprecedented fluency and versatility. Yet, their lack of semantic understanding and ethical reasoning presents significant risks.
+        </p>
+
+        <h4>Administrative Applications</h4>
+        <p>
+          In administrative contexts, AI writers can streamline operations: summarising legal documents, drafting emails, and automating customer service (Brown et al., 2020). This enhances efficiency and reduces cognitive load. However, as Hutson notes, these systems are “mouths without brains”; they generate plausible text without grasping meaning. This poses risks in high-stakes environments like healthcare or law, where misinterpretation can lead to harm (McGuffie and Newhouse, 2020).
+        </p>
+
+        <h4>Creative Domains</h4>
+        <p>
+          In creative domains, AI can inspire new forms of collaboration. As the article by Hutson (2021) puts it, GPT-3 [and onwards]’s poetic outputs are often “worth editing”. Yet, its tendency to reproduce biases and stereotypes embedded in training data raises concerns about cultural representation and ethical authorship (Bender et al., 2021). The “stochastic parrot” metaphor aptly captures this: AI echoes patterns without critical reflection.
+        </p>
+
+        <h4>Machine Learning Perspective</h4>
+        <p>
+          From a machine learning perspective, the challenge lies in balancing scale with control. While few-shot learning showcases recent GPT models’ adaptability, its unpredictability underlines the need for robust evaluation frameworks and human oversight (Raffel et al., 2020). As we apply these models to real-world problems, especially under uncertainty, we must critically appraise not just their outputs but their epistemic foundations.
+        </p>
+
+        <h4>Conclusion</h4>
+        <p>
+          Ultimately, AI writers are tools—not authors. Their integration into workflows should prioritise human-centric design, ethical safeguards, and contextual awareness, echoing the principles of Industry 5.0. The goal is not to replace human creativity or judgment, but to augment it responsibly.
+        </p>
+        <p>---</p>
+        <h4>References</h4>
+        <ul>
+          <li>
+            Bender, E. et al. (2021) ‘On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?’, FAccT ’21: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, pp. 610–623. 
+            <a href="https://doi.org/10.1145/3442188.3445922" target="_blank">Available here</a>.
+          </li>
+          <li>
+            Brown, T. et al. (2020) ‘Language Models Are Few-Shot Learners’, ArXiv (Cornell University) [Preprint]. 
+            <a href="https://doi.org/10.48550/arxiv.2005.14165" target="_blank">Available here</a>.
+          </li>
+          <li>
+            Hutson, M. (2021) ‘Robo-writers: the Rise and Risks of Language-generating AI’, Nature, 591(7848), pp. 22–25. 
+            <a href="https://doi.org/10.1038/d41586-021-00530-0" target="_blank">Available here</a>.
+          </li>
+          <li>
+            McGuffie, K. and Newhouse, A. (2020) ‘The Radicalization Risks of GPT-3 and Advanced Neural Language Models’, arXiv (Cornell University) [Preprint]. 
+            <a href="https://doi.org/10.48550/arxiv.2009.06807" target="_blank">Available here</a>.
+          </li>
+          <li>
+            Raffel, C. et al. (2019) ‘Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer’, ArXiv (Cornell University) [Preprint]. 
+            <a href="https://doi.org/10.48550/arxiv.1910.10683" target="_blank">Available here</a>.
+          </li>
+        </ul>
+
+      <br>
+      <h2>Artefacts: Useful Additional Resource on CNNs</h2>
+      <h3>MIT Introduction to Deep Learning 6.S191: Lecture 3 Convolutional Neural Networks for Computer Vision</h3>
+      <p>
+        This video helped me gain better understanding of CNNs, which is the main deep learning architecture that I need to understand and implement for the individual assignment.
+      </p>
+      <div class="iframe-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oGpzWAlP5p0?si=2aDfmQjZZ-2wx38p" title="YouTube video player" class="embedded-iframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>  
+    <section class="navbarcont">
+      <nav>
+        <a href="ml-unit9.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

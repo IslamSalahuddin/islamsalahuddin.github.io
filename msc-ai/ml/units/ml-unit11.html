@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - Unit 11</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../../../msc-ai/ml/ml.html">Machine Learning</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Machine Learning - Unit 11: Model Selection and Evaluation</h1>
+    </section>
+    <section class="card">
+      <h2>Overview</h2>
+        <p>
+          This unit expands on model selection, evaluation, and deployment, which are critical processes in the machine learning (ML) workflow. 
+          Selecting the correct model is akin to choosing the right tool for a given prediction or classification task. 
+          However, evaluating and monitoring model performance ensures reliability and effectiveness in real-world applications.
+        </p>
+        <p>
+          Additionally, this unit introduces MLOps (Machine Learning Operations), an essential framework for maintaining and deploying models in production environments. 
+          We will examine how automated model monitoring, retraining, and deployment pipelines enhance the robustness of ML systems.
+        </p>
+    </section>
+    <section class="card">
+      <h2>My Reflection</h2>
+        <p>
+          This unit reverted back to machine learning models in general, covering the selection and evaluation metrics and techniques, which I found out of narrative and not making sense, especially
+          that the previous unit was supposed to be about Natural Language Processing (NLP), but it was not.
+        </p>
+        <p>
+          The topic of model selection and evaluation was covered by the unit's lecturecast, in addition to a couple of reading pieces. 
+          A notenbook activity was also included, which I include a note about in the Artefacts section below.
+        </p>
+        <p>
+          Finally, it was time to submit the individual assignment. So, I spent time finalising my code, preparing the slides, recording the presentation, creating a transcript and
+          submitting all of the materials. A link to the GitHub repository with the code base and documentation is included in the Artefacts section below.
+        </p>
+        <p>
+          I also want to mention that the assignment mentioning of construting a CNN model to perform "object recognition" was a bit confusing to me, as the task was to build the model using <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-10 </a> dataset.
+          CIFAR-10 is a dataset used for image classification, which involves categorising images into predefined classes (e.g., cat, dog, airplane). On the other hand, object recognition typically refers to identifying and locating objects within an image, which is a more complex task that requires having training data with bounding boxes location, which CIFAR-10 does not have.
+          To satisfy my confusion, I emailed the module's tutor, who answered in the seminar, clarifying that both terms are sometimes used interchangeably, and that the task was indeed image classification.
+          This was good news to me, as I had already built the model for image classification, so I did not have to change anything. 
+        </p>
+      </section>
+    <section class="content">
+      <h2>Artefacts - Individual Assignment</h2>
+        <p>
+          The code base for my individual assignment is available on <a href="https://github.com/IslamSalahuddin/cifar10_cnn">GitHub here.</a>
+        </p>
+      <br>
+      <h2>Artefacts - Model Performance Measurement Notebook</h2>
+      <p>
+        The notebook provided a hands-on introduction to CNNs for object recognition. 
+        It begins by loading a dataset of images and preparing the data for training, including normalisation and reshaping steps suitable for CNN 
+        input. The notebook then constructs a CNN architecture using layers such as convolution, pooling, and dense (fully connected) layers, 
+        and compiles the model with appropriate loss and optimisation functions. 
+        Training is performed on the dataset, and the notebook tracks accuracy and loss to evaluate the model’s learning progress.
+      </p>
+      <p>
+        After training, the notebook demonstrates how to use the model to make predictions on unseen test images. 
+        Users are encouraged to change the test image index (e.g., from 16 to any value between 1 and 15) to observe how well the model 
+        generalises and predicts object classes.
+      </p>
+    </section>
+
+    <section class="navbarcont">
+      <nav>
+        <a href="ml-unit12.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - Unit 5</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../../../msc-ai/ml/ml.html">Machine Learning</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Machine Learning - Unit 5: Clustering</h1>
+    </section>
+    <section class="card">
+      <h2>Overview</h2>
+      <p>Cluster analysis or clustering is the task of grouping a set of objects in such a way that objects in the same group (called a cluster) are more similar (in some sense) to each other than to those in other groups (clusters). It is a main task of exploratory data analysis, and being used in many fields, including pattern recognition, image analysis, information retrieval, bioinformatics, data compression, computer graphics and machine learning.</p>
+    </section>
+    <section class="card">
+      <h2>My Reflection</h2>
+        <p>This week was specifically about clustering, which is an unsupervised machine learning type of algorithms that allows grouping and predicting the relevant of unseen data.</p>
+        <p>The unit's materials included a lecturecast and a short list of readings. One of them was about clustering metrics of evaluation, specifically explaining the Silhouette method and the Sum of Squared Errors. The Silhouette method and SSE are key metrics for evaluating clustering performance. The Silhouette score, ranging from -1 to 1, assesses how well each data point fits within its assigned cluster compared to others—higher scores indicate better-defined clusters. SSE, on the other hand, measures intra-cluster compactness by summing the squared distances between data points and their respective centroids; lower SSE values suggest tighter groupings. Together, these metrics support techniques like the elbow method and silhouette analysis to determine the optimal number of clusters, balancing cohesion and separation in unsupervised learning.</p>
+        <p>The materials also included two interactive animations that explain the concept of clustering. The <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/">The first</a> lets the user choose the centroids randomly or by picking and see how the algorithm proceeds further, based on a few pre-loaded group of datasets.<a href="https://shabal.in/visuals/kmeans/4.html">The second </a>shows how the configuration of centroids takes place gradually to minimise the distances between each centroid and the members of its nearest cluster.</p>
+        <p>For the team project, the colleagues started to refine the linear regression model I built in the previous week, generating further evaluation metrics and visualisations. We also started drafting our report. One of the colleagues also started building another clustering model to infer the different custers of Airbnb assets, based on the given features.</p>
+      </section>
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Jaccard Coefficient Calculations</h3>
+      <p>This formative activity introduced the concept of similarity measurement in machine learning through the Jaccard coefficient, applied to a small pathological test dataset. We were asked to compute the Jaccard coefficient for three pairs of individuals—Jack and Mary, Jack and Jim, Jim and Mary—based on binary and categorical features such as symptoms and test results. The task encouraged critical thinking about how data representation affects similarity metrics and clustering outcomes.</p>
+      <div class="table-wrapper">
+        <table class="table-nice">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Fever</th>
+                  <th>Cough</th>
+                  <th>Test-1</th>
+                  <th>Test-2</th>
+                  <th>Test-3</th>
+                  <th>Test-4</th>
+              </tr>
+          </thead>
+          <tbody>
+
+              <tr>
+                  <td>Jack</td>
+                  <td>M</td>
+                  <td>Y</td>
+                  <td>N</td>
+                  <td>P</td>
+                  <td>N</td>
+                  <td>N</td>
+                  <td>A</td>
+
+              </tr>
+
+              <tr>
+                  <td>Mary</td>
+                  <td>F</td>
+                  <td>Y</td>
+                  <td>N</td>
+                  <td>P</td>
+                  <td>A</td>
+                  <td>P</td>
+                  <td>N</td>
+              </tr>
+
+              <tr>
+                  <td>Jim</td>
+                  <td>M</td>
+                  <td>Y</td>
+                  <td>P</td>
+                  <td>N</td>
+                  <td>N</td>
+                  <td>N</td>
+                  <td>A</td>
+              </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>Jaccard Coefficient for Jack and Mary = 0.5 (Similar in 3 items out of overall 6 items)</li>
+        <li>Jaccard Coefficient for Jack and Jim = 0.5 (Similar in 3 items out of overall 6 items)</li>
+        <li>Jaccard Coefficient for Jim and Mary = 0.17 approx. (Similar in one item out of overall 6 items)</li>
+    </section>  
+    <section class="navbarcont">
+      <nav>
+        <a href="ml-unit6.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>

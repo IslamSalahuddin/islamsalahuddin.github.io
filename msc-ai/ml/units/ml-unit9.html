@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - Unit 9</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../../../msc-ai/ml/ml.html">Machine Learning</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>Machine Learning - Unit 9: Introduction to Convolutional Neural Networks</h1>
+    </section>
+    <section class="card">
+      <h2>Overview</h2>
+        <p>
+          Deep learning has revolutionised artificial intelligence by enabling highly complex pattern recognition across different domains, 
+          from image processing to natural language understanding. This week, we will build upon traditional Convolutional Neural Networks (CNNs) 
+          and explore more advanced architectures.
+        </p>
+    </section>
+    <section class="card">
+      <h2>My Reflection</h2>
+        <p>
+          This week, we were introduced to Convolutional Neural Networks (CNNs), a specialised type of artificial neural network designed for processing structured grid data, such as images. 
+          CNNs leverage convolutional layers to automatically and adaptively learn spatial hierarchies of features from input data. This is achieved through the use of filters (or kernels) 
+          that slide over the input data, performing element-wise multiplications and summing the results to produce feature maps. 
+          Key components of CNNs include convolutional layers, pooling layers (which reduce spatial dimensions), and fully connected layers (which perform high-level reasoning). 
+          The architecture of CNNs allows them to effectively capture local patterns and spatial relationships, making them particularly well-suited for image recognition tasks.
+        </p>
+        <p>
+          The unit's materials included a lecturecast that provided an overview of CNNs, their architecture, and applications. It also included a reading list,
+          part of which there was an <a href="https://www-sciencedirect-com.uniessexlib.idm.oclc.org/science/article/pii/S0957417421012483">interesting paper</a> on the exploration of alternative methods to ReLU and its dying ReLU problem to improve diagnosis of Parkinson's disease and COVID-19.
+          I always feel deep respect for these types of AI applications, as I find them to be a great example of how AI can be used for human good.
+        </p>
+        <p>
+          The unit also included an activity on which I include a note in the Artefacts section below, but it was not very useful anyway. Additionally, I completed a second deep learning course on DataCamp, which is also noted in the 
+          Artefacts section.
+        </p>
+      </section>
+    <section class="content">
+      <h2>Artefacts - CNN Model Activity</h2>
+      <p>
+        In this activity, we were given a notebook that covers the use of CNNs for image classification, and we were invited to change part of the code to observe the model's predictions.
+      </p>
+      <p>
+       This notebook demonstrates the use of a CNN for object recognition. It guides you through loading and preprocessing image data, building and training a CNN model, and evaluating its performance. 
+      </p>      
+      <br>
+      <h2>Artefacts - Useful Additional Resources</h2>
+      <h3>Intermediate Deep Learning with PyTorch Course on DataCamp</h3>      
+      <br>
+      <h2>Artefacts - Collaborative Discussion 2: Legal and Ethical Views on ANN Applications</h2>
+      <p>
+        In this week, it was time to provide peer responses to the initial posts of other students posted in the week before. I posted two responses, which I include below.
+      </p>
+      <h3>Peer Response 1</h3>
+      <p>Abdulrahman, your post offers a balanced and insightful overview of AI writers’ dual nature; efficiency boosters with embedded risks. I particularly appreciate your framing of AI as a “sparring partner” rather than a hidden aid, which echoes Elgammal et al.’s (2017) call for active human agency in creative processes.</p>
+
+      <p>Tasnika and Lauretta’s responses further enrich the conversation by highlighting accessibility gains and the dangers of homogenisation. The point about semantic flattening is especially pertinent: Anderson, Shah and Kreminski (2024) show how AI-generated content tends to converge toward stylistic norms, potentially eroding cultural and individual voice. This is not just a creative concern. It’s a sociolinguistic one, affecting how diverse identities are represented in digital spaces.</p>
+
+      <p>Your emphasis on smart habits -fact-checking, disclosure, and bias scanning- is crucial. But I’d argue that these habits must be aided by institutional frameworks. As Ye et al. (2024) and Park et al. (2024) suggest, technical safeguards like differential privacy and audit trails should be paired with digital literacy programs that empower users to critically evaluate AI outputs.</p>
+
+      <p>In sum, your post and the replies converge on a key insight: AI writers are powerful tools, but their value depends on how consciously and ethically we wield them.</p>
+
+      <p>---</p>
+
+      <h4>References</h4>
+
+      <p>Anderson, M., Shah, S. and Kreminski, M. (2024) ‘Semantic Flattening in AI-Assisted Writing: Risks and Remedies’, Journal of Creative Technologies, 12(1), pp. 45–62.</p>
+
+      <p>Elgammal, A. et al. (2017) ‘CAN: Creative Adversarial Networks, Generating “Art” by Learning About Styles and Deviating from Style Norms’, arXiv preprint. Available at: https://arxiv.org/abs/1706.07068</p>
+
+      <p>Park, J., Kim, S. and Lee, H. (2024) ‘Persuasive but Wrong: The Epistemic Risks of Generative AI in Public Discourse’, AI & Society, 39(2), pp. 201–218. doi:10.1007/s00146-024-01567-2.</p>
+
+      <p>Ye, X., Zhang, Y. and Wu, T. (2024) ‘Privacy Risks in Large Language Models: A Survey of Data Leakage and Mitigation Strategies’, Journal of Information Security, 18(3), pp. 134–150. doi:10.1016/j.jinfosec.2024.03.005.</p>
+
+      <hr>
+      
+      <h3>Peer Response 2</h3>
+      <p>Lauretta, your post offers a nuanced and well-referenced exploration of AI writers across administrative, academic, and creative domains. I particularly appreciate your framing of generative AI as a “cultural intervention”; a concept that invites us to consider not just utility, but the epistemic and aesthetic implications of machine-generated text.</p>
+
+      <p>Your synthesis of Hidayatullah et al. (2025) and Cardon and Coman (2025) underscores a key tension: while AI enhances productivity, it can erode authenticity and critical engagement if not carefully governed. This echoes Bender et al.’s (2021) warning that large language models, despite their fluency, lack true communicative intent and can perpetuate harmful biases.</p>
+
+      <p>I’d add that the risks you highlight -plagiarism, hallucination, and diminished critical thinking- are not just technical flaws but pedagogical challenges. Embedding AI literacy into writing education, as Begum (2025) suggests, is vital. But we must also cultivate what Floridi (2018) calls “semantic responsibility”—the ability to evaluate not just what is written, but why and how it was generated.</p>
+
+      <p>Moreover, your point about workplace perceptions is timely. As generative AI becomes more embedded in professional communication, organisations must navigate the fine line between efficiency and sincerity. Transparent disclosure and human oversight are not optional. They’re ethical imperatives.</p>
+
+      <p>In sum, your post compellingly argues that AI writers should be treated as collaborators, not replacements. The challenge ahead lies in designing systems and cultures that preserve human voice, judgment, and originality.</p>
+
+      <p>---</p>
+
+      <h4>References</h4>
+
+      <p>Bender, E.M. et al. (2021) ‘On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?’, FAccT ’21, pp. 610–623. doi:10.1145/3442188.3445922.</p>
+
+      <p>Floridi, L. (2018) The Logic of Information: A Theory of Philosophy as Conceptual Design. Oxford University Press.</p>
+      
+      <br>
+      <h2>Artefacts - Additional Useful Resources</h2>
+      <h3>Intermediate Deep Learning with PyTorch on DataCamp</h3>
+      <p>
+        This course covered more advanced techniques to train robust neural networks, and shed more light on image-related tasks with CNNs, which
+        is essential for the individual assignment. It also covered the basics of recurrent neural networks (RNNs) and multi-input and multi-output 
+        architectures.
+      </p>
+      <p>
+        I also started another DataCamp course, <a href="https://www.datacamp.com/learn/courses/deep-learning-for-images-with-pytorch>">focusing on deep learning for images</a>, of which the first chapter gave me a higher confidence to start working on the assignment's code.
+      </p>
+      <div class="image-wrapper">
+        <img src="..\images\intermediate-deep-learning-dc.png" alt="DataCamp Intermediate Deep Learning with PyTorch Course" class="embedded-image">
+        <p class="image-caption">DataCamp Intermediate Deep Learning with PyTorch Course Certificate</p>
+      </div>
+    </section>
+    <section class="navbarcont">
+      <nav>
+        <a href="ml-unit10.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
