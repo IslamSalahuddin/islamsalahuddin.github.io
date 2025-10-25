@@ -210,3 +210,18 @@ body {
     border-radius: 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
+
+.card ul {
+  /* ensure comfortable left padding for bullets */
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.card ul li {
+  margin-bottom: 0.65rem; /* space between bullets */
+  line-height: 1.45;       /* improve readability */
+}
+
+.card ul li:last-child {
+  margin-bottom: 0; /* avoid extra space after the list */
+}
