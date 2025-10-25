@@ -1,8 +1,10 @@
 body {
   margin: 2rem auto;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #1a2236;
-  color: #e0e6ed;
+  /* Warm, light background for an inviting canvas */
+  background: #FBF7F2;
+  /* Dark charcoal text for strong contrast */
+  color: #2C3136;
 }
 
 .content {
@@ -10,17 +12,20 @@ body {
   max-width: 80%;
   padding: 2rem;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #1a2236;
-  color: #e0e6ed;
+  background: #FFFFFF; /* crisp card background */
+  color: #2C3136;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.06);
 }
 
 .navbar {
-  background: #162447;
+  background: #4d4d4d; /* deep slate, feels thoughtful */
   color: #fff;
   padding: 1rem 2rem;
   display: flex;
   gap: 2rem;
   align-items: center;
+  border-bottom: 1px solid rgba(44,49,54,0.06);
 }
 .navbar .logo {
   font-weight: bold;
@@ -29,38 +34,45 @@ body {
   text-decoration: none;
 }
 .navbar a {
-  color: #a9b8c9;
+  color: #f1f3f4;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.15s ease;
 }
 .navbar a:hover {
-  color: #e0e6ed;
+  color: #ffffff;
 }
 .hero {
   text-align: center;
-  max-width: 90%;
+  max-width: 70%;
   margin: 2rem auto;
   padding: 3rem 1rem 2rem 1rem;
+  /* subtle warm wash to separate hero from page */
+  background: linear-gradient(180deg, rgba(212,163,115,0.04), rgba(244,240,236,0));
+  border-radius: 10px;
 }
 .hero h1 {
   font-size: 2.5rem;
-  color: #e0e6ed;
+  color: #2C3136; /* inherit dark text for readability */
 }
 .cards {
+  /* single column, center-aligned */
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 .card {
-  background: #222b45;
-  border-radius: 1rem;
-  box-shadow: 0 2px 16px #0002;
+  /* same width for all cards, responsive */
+  width: 800px;
+  max-width: 95%;
+  background: #fff; /* light card for warmth and readability */
+  border-radius: 10px;
+  justify-self: center;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.06);
   padding: 2rem;
-  margin: 2rem auto;
-  max-width: 80%;
-  color: #e0e6ed;
+  margin: 1rem 0;
+  color: #2C3136;
 }
 
 .navbarcont {
@@ -69,20 +81,21 @@ body {
 }
 
 .card h2 {
-  color: #ffffff;
+  color: #2C3136;
 }
 .btn {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.5rem 1.2rem;
-  background: #1f4068;
-  color: #fff;
+  padding: 0.6rem 1.25rem;
+  background: #b97552; /* warm terracotta accent */
+  color: #ffffff;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: background 0.2s;
+  transition: background 0.18s ease, transform 0.18s ease;
 }
 .btn:hover {
-  background: #162447;
+  background: #a56647;
+  transform: translateY(-2px);
 }
 
 .btn-grid {
@@ -102,17 +115,16 @@ body {
   overflow-x: auto;
   margin: 2rem auto;
   padding: 1rem;
-  background: #222b45;
-  border-radius: 1rem;
-  box-shadow: 0 2px 16px #0002;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.04);
 }
 
 /* Table styling */
 .table-nice {
   width: 100%;
   border-collapse: collapse;
-  background: #1a2236;
-  color: #e0e6ed;
+  color: #2C3136;
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
@@ -124,13 +136,13 @@ body {
 }
 
 .table-nice th {
-  background: #162447;
-  color: #fff;
+  background: #34495e; /* maintains hierarchy with nav color */
+  color: #ffffff;
   font-weight: bold;
 }
 
 .table-nice tr:nth-child(even) {
-  background: #222b45;
+  background: #FBF7F2;
 }
 
 /* Class for embedded images */
@@ -141,36 +153,36 @@ body {
     margin: 1rem auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    background: #f9f9f9;
+  background: #fffaf6;
 }
 
 /* Division to wrap images, to be used inside .content */
 .image-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem 0;
-    margin-bottom: 2rem;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    border-radius: 12px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  background: #fff;
+  border: 1px solid rgba(44,49,54,0.04);
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
 
 .image-caption {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-    color: #242424;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-style: italic;
-    background: #c1c7ff;
-    border: #162447;
-    border-radius: 8px;
-    padding: 0.5rem;
-    letter-spacing: 0.01em;
-    line-height: 1.4;
+  display: inline-block; /* wrap tightly so background + radius are visible */
+  text-align: center;
+  font-size: 1rem;
+  color: #5a5a5a; /* slightly darker for contrast */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  border-radius: 8px;
+  padding: 0.25rem 0.65rem; /* more horizontal padding to show background */
+  background: rgba(255,240,230,0.88); /* stronger translucent warm background */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04); /* subtle lift to separate from wrapper */
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
 /* Class for embedded iframes */
@@ -183,7 +195,7 @@ body {
     border: none;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    background: #f9f9f9;
+  background: #fffaf6;
 }
 
 /* Division to wrap iframes, to be used inside .content */
@@ -193,8 +205,8 @@ body {
     align-items: center;
     padding: 1.5rem 0;
     margin-bottom: 2rem;
-    background: #fff;
-    border: 1px solid #e5e5e5;
+  background: #fff;
+  border: 1px solid rgba(44,49,54,0.04);
     border-radius: 12px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
