@@ -18,6 +18,19 @@ body {
   box-shadow: 0 6px 18px rgba(44,49,54,0.06);
 }
 
+/* Hyperlink styling */
+a {
+  word-break: keep-all;
+  overflow-wrap: end;
+  color: #b16e4c;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover {
+  color: #5f3b29;
+  text-decoration: none;
+}
+
 .navbar {
   background: #4d4d4d; /* deep slate, feels thoughtful */
   color: #fff;
@@ -57,6 +70,7 @@ body {
 .cards {
   /* single column, center-aligned */
   display: flex;
+  justify-self: center;
   max-width: 80%;
   padding: 2rem;
   flex-direction: column;
@@ -226,4 +240,121 @@ body {
 
 .card ul li:last-child {
   margin-bottom: 0; /* avoid extra space after the list */
+}
+
+/* === Card Carousel Styles === */
+.carousel-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Use site card background */
+  background: transparent;
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  width: 200px;
+  background: #fff; /* harmonize with .card */
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.10); /* match site shadow */
+  color: #2C3136;
+  position: relative;
+  left: 0px;
+  transition: 0.3s ease-out;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.carousel-card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.carousel-card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+  z-index: 2;
+}
+
+.carousel-card:hover ~ .carousel-card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.carousel-title {
+  color: #b97552; /* warm accent */
+  font-weight: 500;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+  font-size: 1.15rem;
+}
+
+.carousel-text {
+  color: #704c3a;
+  font-weight: 480;
+  position: relative;
+  left: 20px;
+  top: 130px;
+  font-size: 1.10rem;
+  max-width: 75%;
+}
+
+.carousel-bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.carousel-emptybar {
+  background-color: #f4f0ec; /* subtle warm */
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.carousel-filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: linear-gradient(90deg, #b97552 0%, #d4a373 65%, #ffba00 100%);
+  border-radius: 3px;
+  transition: 0.3s ease-out;
+}
+
+.carousel-card:hover .carousel-filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.carousel-card:hover .carousel-filledbar,
+.carousel-card.complete .carousel-filledbar {
+  width: 100%;
+  transition: width 2s linear;
+}
+
+/* Responsive adjustments for carousel */
+@media (max-width: 900px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 95%;
+    height: auto;
+  }
+  .carousel-card {
+    width: 160px;
+    height: 220px;
+  }
+  .carousel-bar {
+    width: 110px;
+  }
 }

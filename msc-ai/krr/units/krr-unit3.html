@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +15,17 @@
     <a href="../krr.html">KRR Module</a>
     <a href="../../../about.html">About</a>
   </nav>
-  
+
   <main>
     <section class="hero">
       <h1>KRR - Unit 3: Introduction to Reasoning</h1>
     </section>
-    
+
     <section class="card">
       <h2>Overview</h2>
       <p>
-        As per the course website, "We will be exploring the concept of reasoning and discuss some formal methods of reasoning as the building blocks 
+        As per the course website, "We will be exploring the concept of reasoning and discuss some formal methods of
+        reasoning as the building blocks
         for knowledge representation and reasoning."
       </p>
     </section>
@@ -32,48 +34,66 @@
       <h2>My Reflection</h2>
       <h3>Overall Reflection</h3>
       <p>
-        This unit was more focused on first order logic (FOL), which I now understand that it extends beyond propositional logic (PL), introduced in the previous unit, by adding predicates
-        and quantifiers. Predicates allow to define the relationship between objects in the logical statements, eg. "Father(Hassan, Hussam)" means that Hassan is the father of Hussam,
-        while the second is quantifiers allow to express whether the statements apply to all objects or some objects in the domain. The universal quantifier (∀) indicates
-        that the statement applies to all objects, while the existential quantifier (∃) indicates that the statement applies to at least one object. eg. 
-        ∀x (Person(x) → Mortal(x)) means "All persons are mortal." Meanwhile, ∃x (Person(x) → Mortal(x)) means "There exists at least one person who is mortal."
+        This unit was more focused on first order logic (FOL), which I now understand that it extends beyond
+        propositional logic (PL), introduced in the previous unit, by adding predicates
+        and quantifiers. Predicates allow to define the relationship between objects in the logical statements, eg.
+        "Father(Hassan, Hussam)" means that Hassan is the father of Hussam,
+        while the second is quantifiers allow to express whether the statements apply to all objects or some objects in
+        the domain. The universal quantifier (∀) indicates
+        that the statement applies to all objects, while the existential quantifier (∃) indicates that the statement
+        applies to at least one object. eg.
+        ∀x (Person(x) → Mortal(x)) means "All persons are mortal." Meanwhile, ∃x (Person(x) → Mortal(x)) means "There
+        exists at least one person who is mortal."
       </p>
       <p>
-        According to Sharma et al. (2025), PL and FOL allows to think about and represent knowledge in two different ways. PL models the world in a binary way, where 
-        statements are either true or false, which is known as factored representation. Meanwhile, FOL further represents the quantities and relations between objects, 
-        which is also called structured representation, which is more expressive and closer to the way humans think and reason about the world.
+        According to Sharma et al. (2025), PL and FOL allows to think about and represent knowledge in two different
+        ways. PL models the world in a binary way, where
+        statements are either true or false, which is known as factored representation. Meanwhile, FOL further
+        represents the quantities and relations between objects,
+        which is also called structured representation, which is more expressive and closer to the way humans think and
+        reason about the world.
       </p>
       <h3>Reflection on My Understanding and Activities of the Week</h3>
       <p>
-        In this week, I watched the recording of the week's seminar, finished the lecturecast, and two readings, including one from the text book (Brachman and Levesque, 2004).
-        However, I did not really understand what FOL is until I had to solve the excercises of the formative activities, which were from the unit's readings.
-        For these excercises, I had to search and get assistance from Copilot to let it explain to me the excercises step by step, and clarify things that were not initially 
-        clear to me. This helped me to understand FOL better, and I was able to complete the excercises successfully. My answers for the excercises are presented in the artefacts
+        In this week, I watched the recording of the week's seminar, finished the lecturecast, and two readings,
+        including one from the text book (Brachman and Levesque, 2004).
+        However, I did not really understand what FOL is until I had to solve the excercises of the formative
+        activities, which were from the unit's readings.
+        For these excercises, I had to search and get assistance from Copilot to let it explain to me the excercises
+        step by step, and clarify things that were not initially
+        clear to me. This helped me to understand FOL better, and I was able to complete the excercises successfully. My
+        answers for the excercises are presented in the artefacts
         section below.
       </p>
       <p>
-        Additionally, the unit included creating a final post for the collaborative learning discussion that we started in Unit 1, summarising the responses the I got from my peers
-        on my initial post. But since I have recieved one response only, I will postponed the final post until the next week. Hopefully, I will get more responses by then.
+        Additionally, the unit included creating a final post for the collaborative learning discussion that we started
+        in Unit 1, summarising the responses the I got from my peers
+        on my initial post. But since I have recieved one response only, I will postponed the final post until the next
+        week. Hopefully, I will get more responses by then.
       </p>
       <p>
-        On a last note, through the readings and the excercises, I kept trying to reflect on the connection between FOL, and KRR in general, and my work as a data practitioner.
-        In an attempt to establish this connection, I reflected on the barber's paradox, especially on the recursion side of it, and how it relates to a challenge
+        On a last note, through the readings and the excercises, I kept trying to reflect on the connection between FOL,
+        and KRR in general, and my work as a data practitioner.
+        In an attempt to establish this connection, I reflected on the barber's paradox, especially on the recursion
+        side of it, and how it relates to a challenge
         that I faced at work, and I wrote this as a LinkedIn post, which is also presented below as a final artefact.
       </p>
     </section>
-    
+
     <section class="content">
       <h2>Artefacts</h2>
       <h3>Activity 1</h3>
       <p>
         The following are my responses to two excercises presented by Brachman and Levesque (2004). Namely, they are the
         well known <a href="https://en.wikipedia.org/wiki/Barber_paradox">Barber's Paradox</a> and a variant of
-        <a href="https://math.stackexchange.com/questions/1503013/a-country-of-truth-tellers-and-liars">the traveller and the two inhabitants puzzle.</a> 
+        <a href="https://math.stackexchange.com/questions/1503013/a-country-of-truth-tellers-and-liars">the traveller
+          and the two inhabitants puzzle.</a>
       </p>
       <h4>Chapter 2 Question 4 - The barber's paradox</h4>
       <div class="image-wrapper">
-  <img src="../../../msc-ai/krr/images/barber-paradox.png" alt="Barber Paradox illustration" class="embedded-image" width="500">
-</div>
+        <img src="../../../msc-ai/krr/images/barber-paradox.png" alt="Barber Paradox illustration"
+          class="embedded-image" width="500">
+      </div>
 
       <p>
         <strong>Problem:</strong><br>
@@ -85,7 +105,8 @@
       </p>
       <p>
         <strong>Answer:</strong><br>
-        This is called the Barber’s Paradox, formulated by Bertrand Russell, which is a self-referential puzzle that exposes
+        This is called the Barber’s Paradox, formulated by Bertrand Russell, which is a self-referential puzzle that
+        exposes
         the limits of naïve set definitions and leads to inconsistency in first-order logic (FOL).
       </p>
       <h5>Setup</h5>
@@ -131,8 +152,9 @@
       <br>
       <h4>Chapter 3 Question 4 - A Canadian variant of an old puzzle</h4>
       <div class="image-wrapper">
-  <img src="../../../msc-ai/krr/images/traveller-puzzle.png" alt="Traveller Puzzle illustration" class="embedded-image" style="max-width:500px;">
-</div>
+        <img src="../../../msc-ai/krr/images/traveller-puzzle.png" alt="Traveller Puzzle illustration"
+          class="embedded-image" style="max-width:500px;">
+      </div>
       <h5>(a) FOL Sentences</h5>
       <ol>
         <li>
@@ -140,7 +162,8 @@
           <code>(truth-teller(henri) &and; &not;truth-teller(pierre)) &or; (&not;truth-teller(henri) &and; truth-teller(pierre))</code>
         </li>
         <li>
-          An inhabitant will answer yes to a question if and only if he is a truth teller and the correct answer is yes, or he
+          An inhabitant will answer yes to a question if and only if he is a truth teller and the correct answer is yes,
+          or he
           is not a truth teller and the correct answer is not yes.<br>
           <code>&forall;x &forall;q (answer-yes(x, q) &harr; ((truth-teller(x) &harr; true(q)) &or; (&not;truth-teller(x) &harr; true(q))) )</code>
         </li>
@@ -157,10 +180,11 @@
           <code>&forall;x &forall;q (true(dit-non(x, q)) &harr; &not;answer-yes(x, q))</code>
         </li>
       </ol>
-      
+
       <h5>(b) Ground Term</h5>
       <p>
-        The traveler should ask Henri, “would you say yes if I asked you whether you would say yes to ‘Is left the correct
+        The traveler should ask Henri, “would you say yes if I asked you whether you would say yes to ‘Is left the
+        correct
         direction?’”<br>
         This can be expressed as:<br>
         <code>t = dit-oui(henri, dit-oui(henri, gauche))</code>
@@ -169,12 +193,14 @@
         Whether Henri is a truth-teller or a liar, his answer to this question will be “yes” if and only if the correct
         direction is left. This is because the nested structure neutralises the deception.
       </p>
-      
+
       <h5>(c) KB does not entail which direction to go</h5>
       <p>
-        The knowledge base (KB) does not entail which direction to go, but it helps formulate the right question to neutralise
+        The knowledge base (KB) does not entail which direction to go, but it helps formulate the right question to
+        neutralise
         whether Henri is a liar or not.<br>
-        This can be seen as the following table shows that regardless of whether Henri is a liar or not, using the question
+        This can be seen as the following table shows that regardless of whether Henri is a liar or not, using the
+        question
         above, the traveler can depend on his answer:
       </p>
       <div class="table-wrapper">
@@ -217,8 +243,8 @@
       </div>
     </section>
 
-      
-      
+
+
 
     </section>
 
@@ -226,13 +252,16 @@
       <h2>Artefacts</h2>
       <h3>Activity 2</h3>
       <p>
-        The excercise of this activity was to solve the classic <a href="https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem">"river crossing" puzzle</a> 
-        (aka wolf, goat and cabbage problem) using first order logic (FOL) statements, which was a bit different than the excercises above, because it included state-space
-        representation. Here is my solution: 
+        The excercise of this activity was to solve the classic <a
+          href="https://en.wikipedia.org/wiki/Wolf,_goat_and_cabbage_problem">"river crossing" puzzle</a>
+        (aka wolf, goat and cabbage problem) using first order logic (FOL) statements, which was a bit different than
+        the excercises above, because it included state-space
+        representation. Here is my solution:
       </p>
       <div class="image-wrapper">
-  <img src="../../../msc-ai/krr/images/river-crossing.png" alt="River Crossing Puzzle illustration" class="embedded-image" style="max-width:500px;">
-</div>
+        <img src="../../../msc-ai/krr/images/river-crossing.png" alt="River Crossing Puzzle illustration"
+          class="embedded-image" style="max-width:500px;">
+      </div>
       <p>
         The solution to the classic river crossing puzzle using first order logic (FOL) statements and state-space
         representation:
@@ -351,7 +380,7 @@
       <p>
         <strong>Final state:</strong> All are safe and have crossed to the other side.
       </p>
-        
+
     </section>
 
     <section class="content">
@@ -360,26 +389,29 @@
       <p>
         As an attempt to connect what I am learning, especially in this module to what I exprience, I created a LinkedIn
         post,
-        reflecting on the connection between the barber's paradox, recursion and a DAX challenge I recently faced at work.
+        reflecting on the connection between the barber's paradox, recursion and a DAX challenge I recently faced at
+        work.
       </p>
       <div class="iframe-wrapper">
-        <iframe class="embedded-iframe" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7392878601039335424"
-        frameborder="0" allowfullscreen title="Embedded LinkedIn post">
+        <iframe class="embedded-iframe"
+          src="https://www.linkedin.com/embed/feed/update/urn:li:share:7392878601039335424" frameborder="0"
+          allowfullscreen title="Embedded LinkedIn post">
         </iframe>
       </div>
     </section>
 
-  <section class="content">
-    <h3>References</h3>
-    <p>
-      Brachman, R.J. and Levesque, H.J. (2009) Knowledge representation and reasoning. Elsevier.
-    </p>
-    <p>
-     Sharma, N. et al. (2025) ‘First Order Logic’, in Introduction to Artificial Intelligence. UC Berkeley. 
-     Available at: https://inst.eecs.berkeley.edu/~cs188/textbook/logic/first-order-logic.html (Accessed: 8 November 2025). 
-    </p>
-  </section>
-    
+    <section class="content">
+      <h3>References</h3>
+      <p>
+        Brachman, R.J. and Levesque, H.J. (2009) Knowledge representation and reasoning. Elsevier.
+      </p>
+      <p>
+        Sharma, N. et al. (2025) ‘First Order Logic’, in Introduction to Artificial Intelligence. UC Berkeley.
+        Available at: https://inst.eecs.berkeley.edu/~cs188/textbook/logic/first-order-logic.html (Accessed: 8 November
+        2025).
+      </p>
+    </section>
+
     <section class="navbarcont">
       <nav>
         <a href="krr-unit5.html" class="btn">Next Unit →</a>
@@ -388,4 +420,5 @@
   </main>
   <script src="main.js"></script>
 </body>
+
 </html>
