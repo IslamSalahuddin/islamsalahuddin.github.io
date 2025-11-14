@@ -74,7 +74,7 @@ a:hover {
   margin: 0 auto;
   padding: 3rem 0 2rem 0;
   border-radius: 0;
-  background: #ffe5d9;
+  background: #FBF7F2;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -394,5 +394,184 @@ a:hover {
     width: 100%;
     height: 95%;
     top: 40%;
+  }
+}
+
+/* --- Carousel container layout fixes (scope to avoid global .card conflicts) --- */
+.carousel-container,
+.legacy-carousel .container {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 3rem auto; /* increased vertical spacing between carousel containers */
+}
+
+/* ensure anchor-wrapped cards behave like block cards */
+.carousel-container a.carousel-card,
+.carousel-container .card,
+.legacy-carousel .container .card {
+  display: block; /* anchors behave as block elements */
+  box-sizing: border-box;
+  width: 200px;
+  min-width: 160px;
+  height: 280px;
+  padding: 1.2rem;
+  margin: 0; /* spacing handled by container / negative overlap below */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 26px rgba(44,49,54,0.10);
+  position: relative;
+  left: 0;
+  transition: transform 0.4s ease-out, left 0.4s ease-out;
+  overflow: hidden;
+}
+
+/* negative overlap for stacked appearance (preserve original behaviour) */
+.carousel-container a.carousel-card:not(:first-child),
+.carousel-container .card:not(:first-child),
+.legacy-carousel .container .card:not(:first-child) {
+  margin-left: -50px;
+}
+
+/* hover lift and push siblings */
+.carousel-container a.carousel-card:hover,
+.carousel-container .card:hover,
+.legacy-carousel .container .card:hover {
+  transform: translateY(-20px);
+  z-index: 5;
+}
+.carousel-container a.carousel-card:hover ~ a.carousel-card,
+.carousel-container .card:hover ~ .card,
+.legacy-carousel .container .card:hover ~ .card {
+  left: 50px;
+}
+
+/* Title inside card - normal flow (not absolute) to avoid overlap issues */
+.carousel-container .carousel-title,
+.carousel-container .title,
+.legacy-carousel .container .title {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 0 0.4rem 0;
+  color: #251500;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Progress bar positioning kept inside card but not overflowing */
+.carousel-container .carousel-bar,
+.carousel-container .bar,
+.legacy-carousel .container .bar {
+  position: relative;
+  margin-top: 0.4rem;
+  height: 5px;
+  width: calc(100% - 40px);
+  /* keep a maximum width similar to original */
+  max-width: 150px;
+}
+
+/* Empty / filled bar visuals (scoped) */
+.carousel-container .carousel-emptybar,
+.carousel-container .emptybar,
+.legacy-carousel .container .emptybar {
+  background-color: #f4f0ec;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.carousel-container .carousel-filledbar,
+.carousel-container .filledbar,
+.legacy-carousel .container .filledbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #b97552 0%, #d4a373 65%, #ffba00 100%);
+  border-radius: 3px;
+  transition: width 0.6s ease-out;
+}
+
+/* hover / complete behaviors (scoped) */
+.carousel-container a.carousel-card:hover .carousel-filledbar,
+.carousel-container .card:hover .filledbar {
+  width: 100%;
+  transition: width 1.2s linear;
+}
+.carousel-container a.carousel-card.complete .carousel-filledbar,
+.carousel-container .card.complete .filledbar {
+  width: 100%;
+  transition: width 2s linear;
+}
+
+/* Slightly larger title to maintain hierarchy */
+.carousel-container .carousel-title,
+.carousel-container .title,
+.legacy-carousel .container .title {
+  font-size: 1.12rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+}
+
+/* Center the carousel-text vertically inside the card and keep it slightly smaller */
+.carousel-container .carousel-text,
+.carousel-container .card-text,
+.legacy-carousel .container .card-text {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight:normal;
+  color: #444444;
+  text-align: left;
+  line-height: 1.3;
+  pointer-events: none; /* avoid accidental clicks when cards are clickable */
+}
+
+/* Ensure card container is positioned relative so absolute centering works */
+.carousel-container a.carousel-card,
+.carousel-container .card,
+.legacy-carousel .container .card {
+  position: relative; /* existing rule retained, ensure present */
+}
+
+/* Reduce bar top spacing so it doesn't overlap centered text on small cards */
+.carousel-container .carousel-bar,
+.carousel-container .bar,
+.legacy-carousel .container .bar {
+  margin-top: 0.25rem;
+}
+
+/* Responsive adjustments for carousel container cards */
+@media (max-width: 900px) {
+  .carousel-container,
+  .legacy-carousel .container {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .carousel-container a.carousel-card,
+  .carousel-container .card,
+  .legacy-carousel .container .card {
+    width: 160px;
+    height: 220px;
+    padding: 0.9rem;
+  }
+  .carousel-container .carousel-bar,
+  .carousel-container .bar {
+    max-width: 110px;
+    width: calc(100% - 30px);
   }
 }
