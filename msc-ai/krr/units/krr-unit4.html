@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Representation and Reasoning - Unit 4</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="../../../home.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai/msc-ai.html">MSc AI</a>
+    <a href="../krr.html">KRR Module</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Unit 4: Introduction to Logic Programming</h1>
+    </section>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        As per the course website, "This unit will introduce logic programming, which is essential to understanding 
+        the formal methods such as first order logic. Programming examples will be discussed based Prolog programming languages.
+        This unit will provide experience in writing, running, and evaluating programmes in a typical logic programming language, 
+        in this case Prolog."
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Reflection</h2>
+      <h3>Overall Reflection</h3>
+      <p>
+        This unit was a relatively light one, regarding the activities and the workload, but the topic was very novel to me,
+        and a bit challenging to grasp.
+      </p>
+      <p>
+        I watched the recording of Unit 4 Seminar, and went through the two reading materials, but one of them was a broken link
+        and the other was <a href="https://www.swi-prolog.org/">SWI Prolog documentation</a>, which I did not find very helpful
+        without me understanding what logic programming or Prolog is in the first place. 
+      </p>
+      <h3>Reflection on My Understanding and Activities of the Week</h3>
+      <p>
+        To better understand what logic programming is, I referred to <a href="http://logicprogramming.stanford.edu/notes/chapter_01.html">these course notes from
+          Stanford University</a> by Genesereth (no date). According to these notes, logic programming is a style of programming that is based on the
+          language of symoblic language. In other words, it is composed of logical sentences of what is true and what is false,
+          along with the relationships between the entities. 
+      </p>
+      <p>
+        Logic programming is declarative, meaning that the programmer specifies what the program should accomplish, rather than
+        being imperative, where the programmer specifies how to accomplish it step by step. This is done through facts, rules, and queries.
+        Logic programming is also descriptive, meaning that it focuses on describing the problem domain and the relationships between entities,
+        rather than being prescreptive, where the focus is on specifying a sequence of actions to achieve a specific goal.
+        Declarative and descriptive programming, as in logic programming, does not specify internal processing details, like 
+        data types and variable assignments, leaving those details to the underlying logic programming system. Whereas these specifications
+        are essential in imperative and prescriptive programming paradigms.
+      </p>
+      <p>
+        In the <a href="http://logicprogramming.stanford.edu/lectures/lecture_01.pdf">slides of the same course</a>, I also 
+        found that logic programming has different types, including: database programming (like Datalog and SQL),
+        classic programming (like Prolog) and dynamic logic programming (like Epilog and LPS). Understanding that database programming,
+        including data modeling and query languages were an application of logic programming helped me connect this topic to my work experience.
+        Also, as the same course notes mentioned, logical spreadsheets are also an application of logic programming. 
+      </p>
+      <p>
+        Therefore, I became able to see that logic programming as a programming style for explicit rule-based systems, which were the early form
+        of intelligent systems before the rise of machine learning. However, I understood that logic programming is still used to build 
+        expert systems (Chen and Lin, 2021), when they are meant to be built on clear, intepretable rules, rather than being based on large datasets and the
+        relationships that machine learning algorithms can infer from them. In the same manner, it is also still used in some natural
+        language processing (NLP) applications (Dahl and Cecchi, 2023). It is specially useful to study and research knowledge 
+        representation and reasoning in a domains of knowledge when planning to develop intelligent systems (Dahl and Cecchi, 2023).
+        That is why logic programming is still imperative for artificial intelligence (AI), despite its niche use from a commercial
+        aspect.
+      </p>
+      <p>
+        Overall, I believe being exposed to the topic of this unit, even briefly, helped me expand my perspective regarding programming
+        types and paradigms, and, in retrospective, what machine learning and deep learning add to the rule-based systems. I am looking
+        forward to seeing how the next units will build on this topic.
+      </p>
+      <br>
+      <p style="font-weight: bold;">Reference List</p>
+      <p>
+        Chen, K. and Lin, C.-C. (2021) Design and Implementation of a SWI-Prolog-based Expert System to Diagnose Anxiety Disorder. Available at: https://www.jstage.jst.go.jp/article/pjsai/JSAI2021/0/JSAI2021_4N3IS1b01/_pdf (Accessed: 14 November 2025).
+      </p>
+      <p>
+        Dahl, V. and Cecchi, L.A. (2023) ‘Introducing Prolog in Language-Informed Ways’, in  Prolog: The next 50 Years. Switzerland: Springer, pp. 154–167.
+      </p>
+      <p>
+        Genesereth, M. (no date) Chapter 1 - Introduction, logicprogramming.stanford.edu. Available at: http://logicprogramming.stanford.edu/notes/chapter_01.html (Accessed: 14 November 2025).
+      </p>
+    </section>
+
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Collaborative Learning Discussion 1: Summary Post</h3>
+      <p>
+        In the <a href="./krr-unit3.html">third week</a>, I should have added a summary post for the collaborative learning discussion on the roots of knowledge
+        representation and its relationship with reasoning. However, I waited to receive at least two responses. Here is my summary post:
+      </p>
+      <h4>Summary Post</h4>
+      <p>
+        In my initial post, I outlined the philosophical roots of KRR in knowledge, belief, ontology, and logic, and highlighted how computational systems have amplified the relevance of these concerns. I argued that robust representations are fundamental to enabling meaningful reasoning. This point is echoed by Delgrande et al. (2023), who discuss ongoing challenges such as reasoning under uncertainty and integrating multiple paradigms.
+      </p>
+      <p>
+        My peers have meaningfully expanded on these ideas. The first response reinforced my perspective, emphasising that the conceptual and technical obstacles we face, including scaling up reasoning and blending symbolic with statistical methods, remain central to AI research (Delgrande et al., 2023). This validation highlights just how pivotal representation is in achieving reliable and generalisable reasoning, especially as our models and datasets continue to grow more complex.
+      </p>
+      <p>
+        The second peer response took the conversation further by focusing on the limitations of large language models (LLMs) in handling logical and mathematical inferences. Their point about the necessity for explicit symbolic frameworks, even as we integrate statistical learning, closely aligns with my original argument. The discussion of PAC-Semantics as a bridge between probabilistic and deductive reasoning (Mocanu & Belle, 2023) is especially intriguing and points towards promising directions for advancing trustworthy and interpretable AI systems.
+      </p>
+      <p style="font-weight: bold;">Reference List</p>
+      <p>
+        Delgrande, J., et al., 2023. Current and future challenges in knowledge representation and reasoning. Dagstuhl Manifestos, 1(1), pp.1–58.
+      </p>
+      <p>
+        Mocanu, I. & Belle, V., 2023. Knowledge representation and acquisition in the era of large language models: Reflections on learning to reason via PAC-Semantics. Natural Language Processing Journal, 5, 100036.
+      </p>
+    </section>
+
+    <section class="navbarcont">
+      <nav>
+        <a href="krr-unit5.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
