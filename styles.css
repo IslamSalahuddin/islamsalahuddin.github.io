@@ -26,6 +26,7 @@ a {
   text-decoration: none;
   transition: color 0.18s;
 }
+
 a:hover {
   color: #5f3b29;
   text-decoration: none;
@@ -654,7 +655,8 @@ a:hover {
 .module-item-desc {
   padding: 8px 24px 12px;
   color: #fff;
-  position: relative;
+  /* position changed so status pills inside can be positioned against .module-item */
+  position: static;
   z-index: 1;
   overflow: hidden;
   transform: translateY(calc(100% - 140px));
@@ -667,15 +669,15 @@ a:hover {
   justify-content: flex-end;
 }
 
+.module-item.active .module-item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+
 .module-item-desc h3 {
   margin: 0 0 10px;
   font-size: 28px;
   line-height: 34px;
-}
-
-.module-item.active .module-item-desc {
-  transform: none;
-  -webkit-transform: none;
 }
 
 .module-item-desc p {
@@ -817,3 +819,206 @@ a:hover {
     -webkit-transform: translateY(calc(100% - 42px));
   }
 }
+
+/* =========================
+   Card / Carousel Status UI
+   - Small corner pill (.status) with variants
+   - Optional rotated ribbon (.status-ribbon)
+   - Optional bottom progress bar (.status-progress)
+   Usage: add classes to card containers: .card, .module-item, .carousel-card, .slider .item, etc.
+   Example: <div class="module-item status-ongoing">...<span class="status">Ongoing<span class="status-dot"></span></span></div>
+   ========================= */
+
+.status { /* pill badge */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.08);
+  pointer-events: none; /* non-interactive by default */
+  white-space: nowrap;
+}
+
+/* small circular indicator inside the pill */
+.status .status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.08) inset;
+}
+
+/* SIZE VARIANTS (optional) */
+.status-sm { padding: 0.18rem 0.45rem; font-size: 0.78rem; top: 10px; right: 10px; }
+.status-lg { padding: 0.4rem 0.8rem; font-size: 0.98rem; }
+
+/* STATUS THEMES */
+/* Ongoing - green + subtle pulse */
+.status-ongoing { background: linear-gradient(90deg,#28a745 0%, #20c997 100%); color: #ffffff; }
+.status-ongoing .status-dot { background: #ffffff; box-shadow: 0 0 0 4px rgba(40,167,69,0.09); animation: status-pulse 2.2s infinite ease-in-out; }
+
+/* Paused - amber / terracotta */
+.status-paused { background: linear-gradient(90deg,#f39c12 0%, #e67e22 100%); color: #fff; }
+.status-paused .status-dot { background: #fff; box-shadow: 0 0 0 4px rgba(243,156,18,0.08); }
+
+/* Retired - muted grey */
+.status-retired { background: linear-gradient(90deg,#95a5a6 0%, #7f8c8d 100%); color: #ffffff; opacity: 0.98; }
+.status-retired .status-dot { background: #ecf0f1; box-shadow: none; }
+
+/* Upcoming / Yet to come - cool blue */
+.status-upcoming { background: linear-gradient(90deg,#6ea6ff 0%, #8e7cc3 100%); color: #fff; }
+.status-upcoming .status-dot { background: #fff; box-shadow: 0 0 0 4px rgba(110,166,255,0.08); }
+
+/* subtle pulse animation used by 'ongoing' */
+@keyframes status-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Rotated ribbon variant (useful for strong visual) */
+.status-ribbon {
+  position: absolute;
+  left: -40px;
+  top: 14px;
+  z-index: 28;
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  padding: 0.35rem 5.2rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.08);
+  pointer-events: none;
+  white-space: nowrap;
+  border-radius: 3px;
+}
+
+/* match ribbon colors to status themes */
+.status-ribbon.ongoing { background: linear-gradient(90deg,#28a745,#20c997); }
+.status-ribbon.paused { background: linear-gradient(90deg,#f39c12,#e67e22); }
+.status-ribbon.retired { background: linear-gradient(90deg,#95a5a6,#7f8c8d); }
+.status-ribbon.upcoming { background: linear-gradient(90deg,#6ea6ff,#8e7cc3); }
+
+/* Bottom progress indicator for cards (optional)
+   Set the progress using an inline style: style="--progress:62%" */
+.status-progress {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  height: 8px;
+  background: #f4f0ec;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+  z-index: 22;
+}
+
+/* filled portion (reads --progress custom property) */
+.status-progress .status-filled {
+  height: 100%;
+  width: var(--progress, 0%);
+  background: linear-gradient(90deg, #b97552 0%, #d4a373 65%, #ffba00 100%);
+  transition: width 0.8s cubic-bezier(.2,.9,.2,1);
+  box-shadow: 0 2px 8px rgba(44,49,54,0.08);
+}
+
+/* Optional: small text label above progress */
+.status-progress .progress-label {
+  position: absolute;
+  top: -20px;
+  right: 6px;
+  font-size: 0.78rem;
+  color: #5a5a5a;
+  background: rgba(255,255,255,0.95);
+  padding: 0.12rem 0.4rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(44,49,54,0.06);
+}
+
+/* Safe scoping hints: common card-like elements already present in this stylesheet
+   naturally contain position: relative; if you must apply to a plain element, ensure the parent is positioned. */
+.card.status,
+.module-item.status,
+.carousel-card.status,
+.slider .item.status { position: relative; }
+
+/* Prevent overlap with module-item-desc low area: if both status-progress and module text appear,
+   move progress up slightly for module-item to keep text visible */
+.module-item .status-progress { bottom: 14px; left: 14px; right: 14px; height: 7px; }
+
+/* Fix: avoid .status overlapping module titles in non-active module items */
+.module-item-desc .status {
+  /* ensure pill sits above the desc content by default and is clearly visible */
+  top: 12px;
+  right: 12px;
+  z-index: 60; /* above overlay and desc content */
+}
+
+/* When module is collapsed (not .active) move the pill upward so it doesn't cover the title */
+.module-item:not(.active) .module-item-desc .status {
+  top: -40px; /* lift the pill above the visible collapsed strip */
+  right: 14px;
+}
+
+/* Slightly less lift on small screens to avoid pushing off-canvas */
+@media (max-width: 767px) {
+  .module-item:not(.active) .module-item-desc .status {
+    top: -30px;
+    right: 10px;
+    font-size: 0.82rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Inactive button variant for pages that are not there yet.
+   Usage: <a class="btn inactive" href="#">Coming soon</a>
+   or for accessibility: <a class="btn" aria-disabled="true" href="#">Coming soon</a> */
+.btn.inactive,
+a.btn.inactive,
+button.btn.inactive,
+.btn[aria-disabled="true"],
+a.btn[aria-disabled="true"],
+button.btn[aria-disabled="true"] {
+  background: #ece8e5;         /* desaturated card-like background */
+  color: #7a7a7a;              /* muted label */
+  box-shadow: none;
+  opacity: 0.95;
+  cursor: not-allowed;
+  pointer-events: none;        /* disable clicks */
+  transform: none;
+  transition: none;
+}
+
+/* Prevent any hover/focus effects when inactive (including illuminated variant) */
+.btn.inactive:hover,
+.btn.inactive:focus,
+a.btn.inactive:hover,
+a.btn.inactive:focus,
+button.btn.inactive:hover,
+button.btn.inactive:focus,
+.btn[aria-disabled="true"]:hover,
+.btn[aria-disabled="true"]:focus {
+  background: #ece8e5;
+  color: #7a7a7a;
+  box-shadow: none;
+  transform: none;
+  outline: none;
+}
+
+/* Keep keyboard focus visible if you prefer an accessible visible focus (optional)
+   Uncomment to allow visible focus but still non-interactive:
+.btn[aria-disabled="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(124,124,124,0.12);
+}
+*/
