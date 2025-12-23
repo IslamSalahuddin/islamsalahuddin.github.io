@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Representation and Reasoning - Unit 9</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="../../../index.html" class="logo">Islam's Portfolio</a>
+    <a href="../../msc-ai.html">MSc AI</a>
+    <a href="../krr.html">KRR Module</a>
+    <a href="../../../about.html">About</a>
+  </nav>
+  
+  <main>
+    <section class="hero">
+      <h1>KRR - Unit 9: Formalism Techniques and Applications</h1>
+    </section>
+    
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        As per the course website, "This unit will continue with tutorials aimed at equipping you with the practical skills to be able to develop 
+        a knowledge-based system. It will explore inferencing and reasoning using the Protégé software. You will be taken through worked examples 
+        from a case study."
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Reflection</h2>
+      <h3>Overall Reflection</h3>
+      <p>
+        This unit included a lecturecast on formalism techniques and applications, in addition to a set of readings and an initiation of a formative
+        collaborative discussion. What was most insightful for me in this unit is the research that I did to initiate the collaborative discussion,
+        which was answering the the following question: "which language do you believe is the most useful to express ontologies that can be utilised by software agents on the WWW: KIF, OWL2, RDF or OWL-lite?"
+      </p>
+      <p>
+        The discussion question sparked a question that has been lingering in my mind over the past few weeks regarding the relevance and role of ontologies
+        and ontology languages in the context of Large Language Models (LLMs) and AI agents. My initial thought was that if we have LLM systems that can 
+        'understand' language and work with it beyond formal explicit rules and structures, then ontology languages might seem obsolete and outdated.
+        However, with a few readings, I understood that ontologies, especially in OWL2 language, can have a crucial role in limiting the hallucinations of LLMs
+        and act at their factual guardrails. I also learnt that the newly developed agent communication protocols, like A2A (which I happened to hear about
+        just the week before) use an JSON-LD as an ontology language that declares the identity of each agent, its capabilities and authentication methods
+        in formats that can be readable to other agents, and friendly to developers at the same time, allowing the interoperability of different AI agents on the web, and
+        opening the doors for the potential realisation for the concept of web of agents. In my initial post to the discussion, I explain this in more detail.
+      </p>
+    </section>
+      
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Formative Activity: Collaborative Discussion</h3>
+      <h4>Initial Post</h4>
+
+      <p>
+        The question at hand on which languages would be the most useful to express ontologies that can be utilised by software agents on the world wide web sparked a more persistent question on my mind on the relevance and usefulness of ontology languages in the modern day of large language models (LLMs), Model Context Protocols (MCPs) and — even more recently — agent communication protocols. The connection that I see here is that agents and agentic artificial intelligence (AI) are entering into a new era where the possibility of even more connected world wide web is pushed further through the pursuit of web of agents, where the web would be an arena for the communication and interoperability between AI agents (Petrova et al., 2025). From this perspective, I argue that OWL2 and JSON-LD would be the most relevant in the modern day of agentic AI.
+      </p>
+
+      <p>
+        OWL2 (Web Ontology Language) is a W3C standard knowledge representation language designed to define formal, explicit specifications of domain concepts, relationships and constraints. Grounded in Description Logic (DL), and designed to enable machine-understandable data and automated logical reasoning, OWL2 can act as a symbolic anchor to mitigate hallucinations of LLMs (Magana and Monti, 2025), which are probabilistic by its own nature. It provides LLMs with formal reasoning consistency checking, factual and contextual guardrails, enforcement of deterministic performance and better traceability and explainability (Magana and Monti, 2025). Therefore, OWL2 continues to be not only highly relevant, but essential, for useful LLM applications, which operate at the core of software agents on the world wide web.
+      </p>
+
+      <p>
+        JSON-LD (JavaScript Object Notation for Linked Data) is a standard, JSON-based serialisation format used to represent linked data and semantic web structures. It combines the semantic rigor of Resource Description Framework (RDF) graph-based model with the developer-friendly structure of JSON (Kakde et al., 2025). The recently developed agent communication protocols, like Agent to Agent (A2A), Agent Network Protocol (ANP) and Agent Communications (ACP) all adopt JSON-LD for their application layers to create Agent Cards. These cards are the component that enables Agent Discovery Protocols by describing agent identities via Decentralised Identifiers (DIDs) in addition to agent capabilities and authentication methods (Agent Network Protocol (ANP), 2024). In this way, JSON-LD-based Agent Cards allow agents to find and collaborate with each other on the open internet. Therefore, JSON-LD can act as the ‘semantic glue’ of the web in the age of agents, and will remain crucial in the foreseeable future.
+      </p>
+
+      <p>
+        In short, OWL2 and JSON-LD are the two languages that are the most relevant and will be the most utilised by AI agents on the web in the foreseeable future, as AI systems shift to the new frontier of neuro-symbolic architectures, which are hybrid paradigms that combine capabilities of neural networks with logical reasoning and structured knowledge representation of symbolic AI. OWL2 has the capability to regulate and fact-guardrail LLMs, protecting them from hallucinations, while JSON-LD is already being used as the language of agents’ “digital passports”, enabling inter-agent communication and collaboration.
+      </p>
+      <br>
+      <b>Reference List</b>
+        <p>Agent Network Protocol (ANP) (2024) Agent Description Protocol Specification, Agentnetworkprotocol.com. Available at: <a href="https://agentnetworkprotocol.com/en/specs/07-anp-agent-description-protocol-specification/" target="_blank" rel="noopener">https://agentnetworkprotocol.com/en/specs/07-anp-agent-description-protocol-specification/</a> (Accessed: 23 December 2025).</p>
+        <p>Kakde, A.P. et al. (2025) ‘Advancing Agentic AI through Communication Protocols’, International Journal of Scientific Research in Science and Technology, 12(5), pp. 299–308. Available at: <a href="https://doi.org/10.32628/ijsrst25125127" target="_blank" rel="noopener">https://doi.org/10.32628/ijsrst25125127</a>.</p>
+        <p>Magana, I. and Monti, M. (2025) Enhancing Large Language Models through Neuro-Symbolic Integration and Ontological Reasoning, arXiv.org. Available at: <a href="https://arxiv.org/abs/2504.07640v1" target="_blank" rel="noopener">https://arxiv.org/abs/2504.07640v1</a> (Accessed: 23 December 2025).</p>
+        <p>Petrova, T. et al. (2025) From Semantic Web and MAS to Agentic AI: A Unified Narrative of the Web of Agents, arXiv.org. Available at: <a href="https://arxiv.org/abs/2507.10644" target="_blank" rel="noopener">https://arxiv.org/abs/2507.10644</a> (Accessed: 23 December 2025).</p>
+    </section>  
+    
+    <section class="navbarcont">
+      <nav>
+        <a href="krr-unit10.html" class="btn">Next Unit →</a>
+      </nav>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
