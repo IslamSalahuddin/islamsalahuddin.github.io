@@ -7,6 +7,54 @@ body {
   color: #2C3136;
 }
 
+/* Skills Chips Styles */
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #f4f0ec;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #2C3136;
+  border: 1px solid #e8e4e0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: #b97552;
+  color: #fff;
+  border-color: #b97552;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(185, 117, 82, 0.2);
+}
+
+.chip i {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.chip i svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.chip--active {
+  background: #b97552;
+  color: #fff;
+  border-color: #b97552;
+}
+
 .content {
   margin: 2rem auto;
   max-width: 80%;
@@ -62,9 +110,8 @@ a:hover {
   padding: 3rem 0 2rem 0;
   border-radius: 0;
   background: linear-gradient(180deg, rgba(212,163,115,0.04), rgba(244,240,236,0)), 
-    url('https://i.postimg.cc/Gtcs55SP/photo-1506318137071-a8e063b4bec0.avif');
+    url('');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   box-shadow: none;
   position: relative;
@@ -118,19 +165,23 @@ a:hover {
 .card h2 {
   color: #2C3136;
 }
+
 .btn {
   display: inline-block;
   margin-top: 1rem;
-  padding: 0.6rem 1.25rem;
-  background: #b97552; /* warm terracotta accent */
-  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  background: #fff;
+  color: #5a5a5a;
   border-radius: 0.5rem;
   text-decoration: none;
-  transition: background 0.18s ease, transform 0.18s ease;
+  transition: background 0.18s ease, transform 0.18s ease, color 0.18s ease;
+  font-size: 0.85rem;
 }
+
 .btn:hover {
   background: #a56647;
   transform: translateY(-2px);
+  color: #fff !important;
 }
 
 .btn-grid {
@@ -539,6 +590,25 @@ a:hover {
   text-align: left;
   line-height: 1.3;
   pointer-events: none; /* avoid accidental clicks when cards are clickable */
+}
+
+/* Carousel details styling */
+.carousel-container .carousel-details {
+  position: relative;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.carousel-container .carousel-details p {
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  color: #5a5a5a;
+  line-height: 1.4;
+}
+
+.carousel-container .carousel-details strong {
+  color: #b97552;
+  font-weight: 600;
 }
 
 /* Ensure card container is positioned relative so absolute centering works */
@@ -1021,4 +1091,297 @@ button.btn.inactive:focus,
 .btn[aria-disabled="true"]:focus {
   box-shadow: 0 0 0 3px rgba(124,124,124,0.12);
 }
-*/
+
+/* --- Selected Overall Projects Section --- */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+/* Override font for project section only */
+.projects-section h1, 
+.projects-section h5 { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Primary color for project section */
+.projects-section {
+  --primary-color: #b97552;
+}
+
+/* Carousel navigation icon */
+.projects-section .carousel-nav-icon {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.projects-section .carousel-nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.projects-section .carousel-nav-icon svg {
+  fill: var(--primary-color);
+  transition: fill 0.3s ease;
+}
+
+/* Project cards styling */
+.projects-section .card {
+  border-radius: 10px;
+  border: 1px solid rgba(44,49,54,0.08);
+  box-shadow: 0 4px 12px rgba(44,49,54,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.projects-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(44,49,54,0.12);
+}
+
+.projects-section .card-img-top {
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card footer styling */
+.projects-section .card-footer {
+  background-color: #fff;
+  border-top: 1px solid rgba(44,49,54,0.08);
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.projects-section .card-footer:hover {
+  background-color: var(--primary-color);
+}
+
+.projects-section .card-footer:hover small.text-muted {
+  color: #fff !important;
+}
+
+.projects-section .card-footer:hover svg {
+  fill: #fff;
+}
+
+/* Card body styling */
+.projects-section .card-body {
+  padding: 1.5rem;
+}
+
+.projects-section .card-title {
+  color: #2C3136;
+  margin-bottom: 1rem;
+}
+
+.projects-section .card-title small {
+  color: #b97552;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.projects-section .card-text {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+/* Responsive card layout */
+@media (min-width: 576px) {
+  .projects-section .card-deck .card {
+    flex: 0 0 calc(100% - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+@media (min-width:  992px) {
+  .projects-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+/* Read more button styling */
+.projects-section .btn-secondary {
+  background-color: #b97552;
+  border-color: #b97552;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.projects-section .btn-secondary:hover {
+  background-color: #a56647;
+  border-color: #a56647;
+  transform: translateY(-2px);
+}
+
+/* Carousel styling */
+.projects-section .carousel {
+  position: relative;
+}
+
+.projects-section .carousel-inner {
+  overflow: hidden;
+}
+
+.projects-section .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Section title styling */
+.projects-section h1 {
+  color: #2C3136;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Video Episodes Section --- */
+.video-episodes-section {
+  --primary-color: #b97552;
+}
+
+.video-episodes-section .carousel-nav-icon {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.video-episodes-section .carousel-nav-icon:hover {
+  transform: scale(1.1);
+}
+
+.video-episodes-section .carousel-nav-icon svg {
+  fill: var(--primary-color);
+  transition: fill 0.3s ease;
+}
+
+.video-episodes-section .card {
+  border-radius: 10px;
+  border: 1px solid rgba(44,49,54,0.08);
+  box-shadow: 0 4px 12px rgba(44,49,54,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.video-episodes-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(44,49,54,0.12);
+}
+
+.video-episodes-section .card-img-top {
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+  object-fit: cover;
+}
+
+.video-episodes-section .card-footer {
+  background-color: #fff;
+  border-top: 1px solid rgba(44,49,54,0.08);
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none !important;
+}
+
+.video-episodes-section .card-footer:hover {
+  background-color: var(--primary-color);
+}
+
+.video-episodes-section .card-footer:hover small.text-muted {
+  color: #fff !important;
+}
+
+.video-episodes-section .card-footer:hover svg {
+  fill: #fff;
+}
+
+.video-episodes-section .card-body {
+  padding: 1.5rem;
+}
+
+.video-episodes-section .card-title {
+  color: #2C3136;
+  margin-bottom: 1rem;
+}
+
+.video-episodes-section .card-title small {
+  color: #b97552;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.video-episodes-section .card-text {
+  color: #5a5a5a;
+  line-height: 1.6;
+}
+
+@media (min-width: 576px) {
+  .video-episodes-section .card-deck .card {
+    flex: 0 0 calc(100% - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  .video-episodes-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+@media (min-width: 992px) {
+  .video-episodes-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .video-episodes-section .card-deck .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+}
+
+/* Ensure card deck has proper width */
+.video-episodes-section .card-deck {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure carousel has proper width */
+.video-episodes-section .carousel {
+  width: 100%;
+}
+
+.video-episodes-section .carousel-inner {
+  width: 100%;
+}
+
+.video-episodes-section .carousel {
+  position: relative;
+}
+
+.video-episodes-section .carousel-inner {
+  overflow: hidden;
+}
+
+.video-episodes-section .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
