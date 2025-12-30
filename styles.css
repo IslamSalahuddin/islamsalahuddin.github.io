@@ -472,7 +472,8 @@ a:hover {
   box-sizing: border-box;
   width: 200px;
   min-width: 160px;
-  height: 280px;
+  height: auto;
+  min-height: 280px;
   padding: 1.2rem;
   margin: 0; /* spacing handled by container / negative overlap below */
   background-color: #fff;
@@ -515,6 +516,30 @@ a:hover {
   color: #251500;
   font-weight: 600;
   font-size: 1rem;
+}
+
+/* Carousel image styling */
+.carousel-container .carousel-image {
+  align-items: center;
+  justify-self: center;
+  display: flex;
+  height: 100px;
+  margin: 0 0 0.8rem 0;
+  overflow: hidden;
+  background-color: transparent;
+
+}
+
+.carousel-container .carousel-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.carousel-container a.carousel-card:hover .carousel-image img {
+  transform: scale(1.05);
 }
 
 /* Progress bar positioning kept inside card but not overflowing */
@@ -1279,6 +1304,9 @@ button.btn.inactive:focus,
   box-shadow: 0 4px 12px rgba(44,49,54,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  flex: 0 0 calc(33.333% - 0.666rem);
+  min-width: 0;
+  max-width: calc(33.333% - 0.666rem);
 }
 
 .video-episodes-section .card:hover {
@@ -1298,7 +1326,6 @@ button.btn.inactive:focus,
   border-radius: 0 0 10px 10px;
   padding: 1rem;
   transition: background-color 0.3s ease;
-  text-decoration: none !important;
 }
 
 .video-episodes-section .card-footer:hover {
@@ -1363,6 +1390,9 @@ button.btn.inactive:focus,
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  flex-wrap: nowrap;
+  display: flex;
+  gap: 1rem;
 }
 
 /* Ensure carousel has proper width */
@@ -1372,10 +1402,35 @@ button.btn.inactive:focus,
 
 .video-episodes-section .carousel-inner {
   width: 100%;
+  overflow: hidden;
+}
+
+.video-episodes-section .carousel-item {
+  width: 100%;
+  overflow: hidden;
 }
 
 .video-episodes-section .carousel {
   position: relative;
+  width:100%;
+  overflow: hidden;
+}
+
+/* Fix carousel row layout */
+.video-episodes-section .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video-episodes-section .col-1 {
+  flex: 0 0 auto;
+  min-width: 60px;
+}
+
+.video-episodes-section .col-10 {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .video-episodes-section .carousel-inner {
