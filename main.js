@@ -317,6 +317,29 @@ $(document).ready(function() {
   }
 });
 
+// Recent Professional Updates Carousel
+$(document).ready(function() {
+  // Only initialize if the carousel exists on the page
+  if($("#updatesCarousel").length) {
+    // Bootstrap carousel automatically handles this with data-ride="carousel"
+    // Just ensure smooth transitions and proper indicator behavior
+    $('#updatesCarousel').on('slid.bs.carousel', function() {
+      // Additional carousel behavior can be added here if needed
+    });
+
+    // Handle navigation button clicks (Bootstrap handles these by default)
+    $('.recent-updates-section .carousel-control-prev').on('click', function(e) {
+      e.preventDefault();
+      $('#updatesCarousel').carousel('prev');
+    });
+
+    $('.recent-updates-section .carousel-control-next').on('click', function(e) {
+      e.preventDefault();
+      $('#updatesCarousel').carousel('next');
+    });
+  }
+});
+
 // Video Episodes Carousel
 $(document).ready(function() {
   // Only initialize if the carousel exists on the page
