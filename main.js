@@ -378,4 +378,51 @@ $(document).ready(function() {
     });
   }
 });
-}    
+}
+
+// Tab Bar Navigation
+class TabBar {
+  constructor(selector) {
+    this.el = document.querySelector(selector);
+    if (!this.el) return;
+    
+    this.el.addEventListener('click', this.switchTab.bind(this));
+    this.initializeCurrentTab();
+  }
+
+  initializeCurrentTab() {
+    // Set the first non-disabled link as current if no current is set
+    const links = this.el.querySelectorAll('.tab-bar__tab-link:not([data-disabled="true"])');
+    const currentLink = this.el.querySelector('[aria-current="page"]');
+    
+    if (!currentLink && links.length > 0) {
+      links[0].setAttribute('aria-current', 'page');
+    }
+  }
+
+  switchTab(e) {
+    const target = e.target.closest('.tab-bar__tab-link');
+    if (!target || target.hasAttribute('data-disabled')) return;
+
+    const href = target.getAttribute('href');
+    
+    // Only handle if it's a navigation link (not #)
+    if (href && href !== '#prev' && href !== '#next') {
+      // Remove current state from all links
+      this.el.querySelectorAll('[aria-current="page"]').forEach(link => {
+        link.removeAttribute('aria-current');
+      });
+      
+      // Set current state on clicked link
+      target.setAttribute('aria-current', 'page');
+      
+      // Navigate
+      window.location.href = href;
+    }
+  }
+}
+
+// Initialize tab bar when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new TabBar('.tab-bar');
+});
