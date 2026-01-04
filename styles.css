@@ -1843,3 +1843,99 @@ button.btn.inactive:focus,
   border-top: none;
   text-align: center;
 }
+
+/* --- Article Card Styles --- */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(44,49,54,0.06);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin: 1.5rem 0;
+}
+
+.article-card:hover {
+  box-shadow: 0 10px 28px rgba(44,49,54,0.12);
+  transform: translateY(-4px);
+}
+
+.article-card-header {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f4f0ec;
+}
+
+.article-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-card-image {
+  transform: scale(1.05);
+}
+
+.article-card-body {
+  padding: 2rem;
+}
+
+.article-card-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.article-publisher {
+  display: inline-block;
+  color: #5a5a5a;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.article-date {
+  color: #5a5a5a;
+  font-style: italic;
+}
+
+.article-card-title {
+  font-size: 1.4rem;
+  color: #2C3136;
+  margin: 0.75rem 0 1rem 0;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.article-card-snippet {
+  color: #5a5a5a;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.article-card-footer {
+  margin-top: 1.5rem;
+}
+
+.article-card .btn {
+  display: inline-block;
+  background: #b97552;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.article-card .btn:hover {
+  background: #a56647;
+  transform: translateX(3px);
+}
