@@ -2,11 +2,11 @@
 
 A sophisticated, multi-personal portfolio website showcasing the diverse professional facets of Islam Salahuddin. This interactive portfolio presents six distinct professional personas, each with their own dedicated section, projects, and status tracking.
 
-## 🌟 Live Demo
+## Live Demo
 
 **[View Live Portfolio](https://islamsalahuddin.github.io/)**
 
-## 📋 Overview
+## Overview
 
 This portfolio website is designed as an interactive experience where visitors can explore different sides of Islam's professional identity:
 
@@ -19,7 +19,7 @@ This portfolio website is designed as an interactive experience where visitors c
 
 Each persona is represented by a custom character illustration and includes detailed professional information, project showcases, and current status indicators.
 
-## 🎨 Design & Features
+## Design & Features
 
 ### Visual Design
 - **Color Scheme**: Warm, inviting palette with coral accents (#b97552) and light backgrounds (#FBF7F2)
@@ -35,7 +35,7 @@ Each persona is represented by a custom character illustration and includes deta
 - **Skills Visualization**: Interactive skill chips with hover effects
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
 
-## 🗺️ Website Structure & Navigation
+## Website Structure & Navigation
 
 ```
 Portfolio Website/
@@ -67,7 +67,7 @@ Portfolio Website/
 3. **Academic Section** (`msc-ai/`): Detailed module breakdown for MSc AI program
 4. **Cross-References**: Projects and experiences linked across multiple personas
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend Technologies
 - **HTML5**: Semantic markup with accessibility considerations
@@ -85,7 +85,7 @@ Portfolio Website/
 - **No build process required**: Static site ready for direct deployment
 - **GitHub Pages**: Hosting platform with automatic deployment from main branch
 
-## 📱 Responsive Design
+## Responsive Design
 
 The website is fully responsive with breakpoints at:
 - **Desktop**: 1200px+ (Full carousel experience)
@@ -93,7 +93,7 @@ The website is fully responsive with breakpoints at:
 - **Mobile**: 576px-767px (Simplified navigation)
 - **Small Mobile**: <576px (Optimized touch interactions)
 
-## 🚀 Deployment
+## Deployment
 
 This repository is configured for GitHub Pages deployment:
 
@@ -105,7 +105,7 @@ This repository is configured for GitHub Pages deployment:
 ### Local Development
 Simply clone the repository and open `index.html` in a web browser - no build process required.
 
-## 📊 Content Sections
+## Content Sections
 
 ### Professional Personas
 Each persona page includes:
@@ -127,7 +127,7 @@ Each persona page includes:
 - **Creative Projects**: Writing samples, AI applications
 - **Academic Work**: Course projects and research
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal portfolio repository. For inquiries or collaboration opportunities:
 
@@ -135,11 +135,11 @@ This is a personal portfolio repository. For inquiries or collaboration opportun
 - **LinkedIn**: [islamsalahuddin](https://www.linkedin.com/in/islamsalahuddin/)
 - **GitHub**: [IslamSalahuddin](https://github.com/IslamSalahuddin)
 
-## 📄 License
+## License
 
 This portfolio is provided for demonstration and personal branding purposes. All code is open source, while content and design elements remain the intellectual property of Islam Salahuddin.
 
-## 🌐 Connect
+## Connect
 
 - **Portfolio**: https://islamsalahuddin.github.io/
 - **LinkedIn**: https://www.linkedin.com/in/islamsalahuddin/
@@ -151,3 +151,4 @@ This portfolio is provided for demonstration and personal branding purposes. All
 
 *Built with 🤍 (Lots of patience)*  
 *Last major version update: January 2025*
+*See Changelog: [CHANGELOG.md](CHANGELOG.md)*
