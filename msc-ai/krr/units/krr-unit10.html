@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowledge Representation and Reasoning - Unit 10</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="../../../index.html">Islam Salahuddin Portfolio</a>
+      </li>
+    </ul>
+  </nav>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>KRR - Unit 10: Reasoning with Protégé</h1>
+    </section>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        As per the course website, "This unit focuses on the architecture of a knowledge-based system and how the
+        various concepts discussed so far fits within.
+        It also introduces further concepts to build on the knowledge of reasoning in knowledge-based systems."
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Reflection</h2>
+      <h3>Overall Reflection</h3>
+      <p>
+        This unit was the first after the return from the winter break. I had only to do a quick reading for a paper on
+        modeling a description logic vocabulary for cancer research
+        <a href="https://www.sciencedirect.com/science/article/pii/S1532046404000917">(Hartel et al., 2005)</a>, a quick
+        formative activity building on Protégé pizza tutorial, and
+        to provide peer responses for the collaborative discussion on ontology languages started in <a
+          href="krr-unit9.html">the previous unit.</a>
+      </p>
+      <h3>Reading Reflection</h3>
+      <p>
+        Modeling a Description Logic Vocabulary for Cancer Research by <a
+          href="https://www.sciencedirect.com/science/article/pii/S1532046404000917">(Hartel et al., 2005)</a>
+        offers a detailed explanation of how the National Cancer Institute developed a large description logic
+        vocabulary to support cancer research. It presents the NCI Thesaurus as both
+        a practical resource and a methodological example, showing how Ontylog’s features such as kinds, roles, and
+        defined concepts enable precise modeling of diseases, anatomy,
+        drugs, genes, and molecular abnormalities. The authors also describe how the vocabulary was converted into OWL
+        Lite to improve interoperability, outlining the mapping choices
+        and the limitations encountered during this process.
+      </p>
+      <p>
+        In addition to the technical modeling, the paper offers a structured approach for collaborating with domain
+        experts who may not think in formal logic. It introduces tools such
+        as use cases, pseudo T Box models, hierarchy reviews, and wireframe diagrams to help experts understand and
+        refine the ontology. The authors highlight lessons about designing
+        intuitive kinds, grounding modeling decisions in real user needs, and focusing on meaningful semantic
+        relationships rather than the number of concepts.
+        Through these contributions, the paper provides both a blueprint for building large biomedical ontologies and
+        practical guidance for maintaining them in real research
+        environments.
+      </p>
+      <p>
+        Below are a few quotes from the paper that I found insightful on ontology development in general:
+      <ul>
+        <li>As relations between concepts, roles are what drive the building of an ontology in determining the structure
+          of the graph. A concept is modeled in the semantics of Ontylog as a set of things. It is the roles as
+          relations between these sets of things that determine how the subsumption graph is created.</li>
+        <li>However given the costs of ontology development one cannot go on doing that very long. Since no ontology is
+          ever complete, a yardstick is needed to help decide where in the namespace to create fine granularity concept
+          hierarchies and richly detailed inter-concept semantics on expressed user needs.</li>
+        <li>[D]evelopers of applications that utilize ontologies should be encouraged to develop suites of regression
+          tests to validate specific data that their applications utilize.</li>
+      </ul>
+      </p>
+      <br>
+      <b>Reference</b>
+      <p>Hartel, F.W. et al. (2005) ‘Modeling a Description Logic Vocabulary for Cancer Research’, <i>Journal of
+          Biomedical Informatics</i>, 38(2), pp. 114–129. Available at: https://doi.org/10.1016/j.jbi.2004.09.001.</p>
+    </section>
+
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Collaborative Discussion</h3>
+      <h4>Peer Response 1</h4>
+      <p>The first peer that I responded to argued that effective knowledge representation on the Web requires ontology
+        languages with clear,
+        formal semantics that both humans and software agents can interpret reliably. While RDF provides a basic
+        structural foundation, it lacks the expressive power
+        needed for reasoning, and alternatives such as OWL‑Lite and KIF are limited either by reduced expressiveness or
+        poor scalability.
+        In contrast, OWL 2 offers a strong balance of formal rigour, modelling capability, and compatibility with web
+        standards, enabling automated reasoning and semantic
+        interoperability across diverse data sources. Ongoing improvements in OWL 2 tooling further strengthen its
+        suitability, leading to the conclusion that it best meets
+        the criteria for representing shared conceptual knowledge on the World Wide Web.</p>
+      <h5>My Response</h5>
+      <p>Thank you for your comprehensive analysis of OWL2's suitability for expressing ontologies on the WWW. I
+        strongly agree with your conclusion that OWL2 represents the optimal choice among the traditional ontology
+        languages presented, particularly given its formal semantics, standardisation, and reasoning capabilities. Your
+        point about RDF's limited expressiveness and OWL-Lite's intentional restrictions effectively demonstrates why
+        OWL2 strikes the necessary balance between computational tractability and semantic richness (Ranatunga et al.,
+        2025).</p>
+
+      <p>However, I would like to extend the discussion beyond the four languages specified in the original question to
+        consider contemporary developments in the agentic AI landscape. While OWL2 provides essential logical reasoning
+        capabilities (what Magana and Monti (2025) describe as a "symbolic anchor" to mitigate LLM hallucinations) I
+        argue that JSON-LD deserves equal consideration as a complementary ontology representation format for modern
+        web-based agents.</p>
+
+      <p>Recent agent communication protocols, including Agent Network Protocol (ANP) and Agent to Agent (A2A), have
+        standardised on JSON-LD for representing agent capabilities and identities through Agent Cards (Agent Network
+        Protocol, 2024; Kakde et al., 2025). This adoption reflects JSON-LD's unique position as semantic "glue" that
+        combines RDF's graph-based rigour with JSON's developer accessibility, enabling agent discovery and
+        interoperability at web scale.</p>
+
+      <p>Your observation about OWL2's ongoing evolution through enhanced reasoning frameworks (Bilenchi, 2025) aligns
+        with broader trends toward neuro-symbolic architectures, where formal ontologies constrain probabilistic AI
+        systems. In this emerging paradigm, OWL2 and JSON-LD serve complementary roles: OWL2 provides logical guardrails
+        and reasoning, while JSON-LD enables practical agent communication and discovery on the open internet.</p>
+
+      <b>Reference List</b>
+
+      <p>Agent Network Protocol (2024) Agent Description Protocol Specification. Available at:
+        https://agentnetworkprotocol.com/en/specs/07-anp-agent-description-protocol-specification/ (Accessed: 23
+        December 2025).</p>
+
+      <p>Kakde, A.P. et al. (2025) 'Advancing Agentic AI through Communication Protocols', International Journal of
+        Scientific Research in Science and Technology, 12(5), pp. 299–308.</p>
+
+      <p>Magana, I. and Monti, M. (2025) Enhancing Large Language Models through Neuro-Symbolic Integration and
+        Ontological Reasoning. Available at: https://arxiv.org/abs/2504.07640v1 (Accessed: 23 December 2025).</p>
+
+      <p>Ranatunga, S. et al. (2025) 'Use of semantic web technologies to enhance the integration and interoperability
+        of environmental geospatial data', International Journal of Geo-Information, 14(2), p.52.</p>
+
+      <br>
+
+      <h4>Peer Response 2</h4>
+      <p>The second peer I responded to argued that while RDF lacks the semantic precision needed for reliable reasoning
+        and OWL 2 can be overly complex and computationally demanding, OWL Lite offers a practical middle ground for
+        web‑based software agents. It provides enough structure to support shared conceptual understanding while
+        remaining lightweight, efficient, and easier to implement in distributed environments. By balancing essential
+        ontology features with manageable complexity, OWL Lite is presented as the most suitable choice for scalable
+        applications that depend on formal, consistent, and interoperable knowledge representation on the World Wide
+        Web.</p>
+      <h5>My Response</h5>
+      <p>Thank you for presenting a well-reasoned argument for OWL Lite based on computational efficiency and practical
+        scalability. Your emphasis on balancing expressiveness with implementability raises an important consideration
+        for web-based agent systems, particularly where resource constraints exist. I appreciate your point that OWL2's
+        advanced constructs may introduce unnecessary complexity in certain applications (W3C, 2012).</p>
+
+      <p>However, I would respectfully challenge the premise that OWL Lite remains the optimal choice in the
+        contemporary landscape of agentic AI. While OWL Lite's simplicity offered advantages historically, the language
+        has been effectively deprecated since OWL 2's release, with W3C recommending migration to OWL 2 profiles (EL,
+        QL, or RL) that provide equivalent or superior computational tractability while offering greater standardisation
+        and tool support (Grau et al., 2008).</p>
+
+      <p>More fundamentally, the emergence of large language models and neuro-symbolic architectures has shifted the
+        computational bottleneck away from ontological reasoning complexity. Modern agents require formal ontologies not
+        primarily for their own reasoning efficiency, but as "symbolic anchors" to constrain probabilistic AI systems
+        and prevent hallucinations (Magana and Monti, 2025). In this context, OWL2's richer expressiveness becomes
+        essential rather than burdensome, as it provides the logical guardrails necessary to ensure deterministic
+        performance and traceability in LLM-driven applications.</p>
+
+      <p>Furthermore, contemporary agent communication protocols have adopted JSON-LD rather than traditional OWL
+        variants for practical interoperability. Agent Network Protocol, Agent to Agent, and Agent Communications
+        Protocol all standardise on JSON-LD for Agent Cards, which enable agent discovery and collaboration through
+        Decentralised Identifiers (Agent Network Protocol, 2024; Kakde et al., 2025). This suggests that practical
+        scalability in modern multi-agent systems derives from lightweight semantic formats combined with formal OWL2
+        reasoning where needed, rather than from restricting ontological expressiveness.</p>
+      
+      <b>Reference List</b>
+
+      <p>Agent Network Protocol (2024) Agent Description Protocol Specification. Available at:
+        https://agentnetworkprotocol.com/en/specs/07-anp-agent-description-protocol-specification/ (Accessed: 23
+        December 2025).</p>
+
+      <p>Grau, B.C. et al. (2008) 'OWL 2: The next step for OWL', Journal of Web Semantics, 6(4), pp. 309-322.</p>
+
+      <p>Kakde, A.P. et al. (2025) 'Advancing Agentic AI through Communication Protocols', International Journal of
+        Scientific Research in Science and Technology, 12(5), pp. 299–308.</p>
+
+      <p>Magana, I. and Monti, M. (2025) Enhancing Large Language Models through Neuro-Symbolic Integration and
+        Ontological Reasoning. Available at: https://arxiv.org/abs/2504.07640v1 (Accessed: 23 December 2025).</p>
+
+      <p>W3C (2012) OWL 2 Web Ontology Language Document Overview (Second Edition). Available at:
+        https://www.w3.org/TR/owl2-overview/</p>
+
+    </section>
+
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Formative Activity - Pizza Tutorial Update</h3>
+      <p>
+        The formative activity of this unit was to create a NonVegetarian Pizza class in the Pizza Tutorial that I started in 
+        <a href="krr-unit8.html">Unit 8</a>. I created a defined class of Pizza similar to VegeterianPizza, but that is defined as having
+        MeatTopping or SeafoodTopping instead. Here is the screenshot of the updated class hierarchy in Protégé:
+      </p>
+      <div class="image-wrapper">
+        <img src="../images/nonvegeterian-pizza-protege-screenshot.png" alt="Protégé Screenshot - NonVegetarian Pizza Class" class="embedded-image">
+      </div>
+    </section>
+
+    <nav class="tab-bar">
+      <ul class="tab-bar__tabs">
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="krr-unit9.html" aria-label="Previous Unit">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--prev" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Previous</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="../../msc-ai.html" aria-label="Back to MSc AI">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--back-msc" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 6h16v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6z"></path>
+                <path d="M4 10h16M8 6V4c0-.6.4-1 1-1h6c.6 0 1 .4 1 1v2M9 14h2M9 18h2M13 14h2M13 18h2"></path>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">MSc AI</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="../krr.html"
+            aria-label="Back to Knowledge Representation and Reasoning Module">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--back-module" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <line x1="9" y1="7" x2="15" y2="7"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Module</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="#next" data-disabled="true" aria-label="Next Unit">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--next" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer class="portfolio-footer">
+      <div class="footer-content">
+        <div class="footer-text">
+          <a href="https://github.com/IslamSalahuddin/islamsalahuddin.github.io" target="_blank"
+            rel="noopener noreferrer" class="footer-creator-link">Created by Islam Salahuddin</a><span
+            class="footer-version">v1.0.0</span>
+        </div>
+        <div class="footer-social-links">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/islamsalahuddin/" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link linkedin" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.814 0-9.737h3.554v1.377c.43-.664 1.201-1.608 2.923-1.608 2.134 0 3.734 1.394 3.734 4.391l-.001 5.577zM5.337 8.855c-1.144 0-1.915-.758-1.915-1.705 0-.955.77-1.702 1.96-1.702 1.188 0 1.914.747 1.939 1.702 0 .947-.751 1.705-1.984 1.705zm1.676 11.597H3.655V9.715h3.358v10.737zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/IslamSalahuddin" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link github" title="GitHub">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <!-- Behance -->
+          <a href="https://www.behance.net/islamsalahuddin1" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link behance" title="Behance">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M22 7h-7V5.5h7V7zm1.726 10c0-3.649-2.909-6.5-6.5-6.5.676 0-6.5 0-6.5 0s-5.818 0-5.818 5.999 2.393 6.5 5.818 6.5c3.425 0 4.178-1.713 4.729-2.92h-2.009c-.253.537-.949 1.156-2.72 1.156-2.08 0-3.647-1.496-3.647-3.54s1.567-3.537 3.647-3.537c1.771 0 2.469.617 2.72 1.154h2.009C17.904 17.285 17.151 15.572 13.726 15.572zm-8.424 2.744h-4.167c0 1.34 1.023 2.338 2.295 2.338 1.272 0 2.295-.998 2.295-2.338l-1.423.017zm5.901-3.87c.562 0 1.016.502 1.016 1.12s-.454 1.12-1.016 1.12h-3.853v-2.24h3.853z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@KafChi_AR" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link youtube" title="YouTube">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:islamsalahuddin8@gmail.com" class="footer-social-link email" title="Email">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
