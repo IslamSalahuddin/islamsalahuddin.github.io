@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   font-family: 'Segoe UI', Arial, sans-serif;
   /* Warm, light background for an inviting canvas */
-  background: #FBF7F2;
+  background: #fffdfa;
   /* Dark charcoal text for strong contrast */
   color: #2C3136;
 }
