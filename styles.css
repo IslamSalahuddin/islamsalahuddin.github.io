@@ -388,6 +388,118 @@ nav ul li a:hover {
   background: #fffaf6;
 }
 
+/* Ontology Visualizations Section Styles */
+.ontology-visualizations {
+  padding: 1.5rem 0;
+}
+
+.ontology-visualizations .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+
+.ontology-visualizations .col-md-6,
+.ontology-visualizations .col-12 {
+  flex: 0 0 calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.ontology-visualizations .col-12 {
+  flex: 0 0 calc(100% - 2rem);
+  max-width: calc(100% - 2rem);
+}
+
+.ontology-visualizations h4 {
+  color: #2C3136;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(185, 117, 82, 0.2);
+}
+
+.ontology-visualizations img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(44, 49, 54, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border: 1px solid rgba(44, 49, 54, 0.04);
+}
+
+.ontology-visualizations img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(44, 49, 54, 0.12);
+}
+
+/* Image magnification modal */
+.image-magnifier-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s ease;
+}
+
+.image-magnifier-modal.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-magnifier-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+.image-magnifier-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.image-magnifier-close:hover,
+.image-magnifier-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .ontology-visualizations .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
 /* Division to wrap images, to be used inside .content */
 .image-wrapper {
   display: flex;
