@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligent Agents - Unit 5</title>
+  <link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="../../../index.html">Islam Salahuddin Portfolio</a>
+      </li>
+    </ul>
+  </nav>
+  </nav>
+
+  <main>
+    <section class="hero" style="background-image: url('https://cdn.buttercms.com/KcQ5rnUvSNGTkpqyF7oM');">
+      <p class="hero-title">Intelligent Agents - Unit 5: Agent Communication</p>
+    </section>
+
+    <section class="card">
+      <h2>Overview</h2>
+      <p>
+        As per the course website, "This week’s lecturecast focuses on the way in which agents communicate with each
+        other. The lecturecast also looks at the theory of language with Speech Acts and then provides an example of an
+        agent communication language (KQML). Finally, an introduction to ontologies and the way they can be used in
+        agent communications will be discussed."
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>My Reflection</h2>
+      <h3>Overall Reflection</h3>
+      <p>
+        This week was an interesting one. It focused on communication between agents, but to do so it started from the
+        philosophy of language between humans, which was interesting and satisfying for me.
+      </p>
+      <p>
+        The lecturecast of the unit gave an overview for both topics, introducing Speech Acts that was pioneered by J.
+        L. Austin and John R. Searle, and is a theory that is generally concerned with how utterance of words initiates
+        actions in a social context, rather than being mere expression of a proposition. The lecturecast then proceeded
+        to introduce Agent Communication Languages (ACLs), espcially Knowledge Query and Manipulation Language (KQML)
+        and its Knowledge Interchange Format (KIF) that can be used to express ontologies.
+      </p>
+      <p>
+        The readings then covered the same area with two reading items. The first was the introduction and Chapter 1
+        from <i>Speech Acts</i> book by Searle (1969). The second was the paper <i>Negotiating over Ontological
+          Correspondences
+          with Asymmetric and Incomplete Knowledge</i> by Payne and Tamma (2014).
+      </p>
+      <h3>Readings Reflection</h3>
+      <p>
+        It was interesting for me to read about philosophy of language through <i>Speech Acts</i>, from which I learned
+        about locutionary, illocutionary and perlocutionary acts. Below are some of the quotes that I liked from the
+        introduction and the first chapter:
+      </p>
+      <ul>
+        <li>
+          "I take it to be an analytic truth about language that whatever can be meant can be said. A given language may
+          not have a syntax or a vocabulary rich enough for me to say what I mean in thatlanguage but there are no
+          barriers in principle to supplementing the impoverished language or saying what I mean in a richer one."
+        </li>
+        <li>
+          "The hypothesis then of this work is that speaking a language is engaging in a rule-governed form of behavior.
+          To put it more briskly, talking is performing acts according to rules."
+        </li>
+        <li>
+          "[S]ome philosophers ask, 'How can making a promise create an obligation?' A similar question would be, 'How
+          can scoring a touchdown create six points ? ' As they stand both questions can only be answered by citing a
+          rule of the form, ' X counts as Y', which is, of course, not to say that the questions cannot be rephrased to
+          ask important questions about the institution of promising—or for that matter, football."
+        </li>
+        <li>
+          "Sometimes in order to explain adequately a piece of human behavior we have to suppose that it was done in
+          accordance with a rule, even though the agent himself may not be able to state the rule and may not even be
+          conscious of the fact that he is acting in accordance with the rule."
+        </li>
+        <li>
+          "In an article entitled Meaning^ Grice gives the following analysis of the notion of "non-natural meaning". To
+          say that a speaker S meant something by X is to say that S intended the utterance of X to produce some effect
+          in a hearer H by means of the recognition of this intention."
+        </li>
+      </ul>
+      <p>
+        For the second reading on <i>Negotiating over Ontological Correspondences with Asymmetric and Incomplete
+          Knowledge</i>, the paper aimed to introduce the concept of <i>Correspondence Inclusion Dialogue (CID)</i>, a
+        protocol of multi-agent communication, by which agents negotiate by exchancing beliefs of the utilities for each
+        correspondence. Published in 2014, the paper introduced CID protocol to solve the gap of having prior research
+        concerened with asymmetric-knowledge agents communication focusing on two approaches. The first was that agents
+        exchange messages of conceptual definitions so that each agent would mutate their ontologies for alignment, and
+        the second was to focus on argumentation techniques on the type of correspondence to discover mutully acceptable
+        alignments. Both approaches rely on having the onotologies of the agent parties being fully shared. Instead, the
+        CID that was proposed by this paper is built on:
+      </p>
+      <ol>
+        <li>
+          "Each agent is aware of a set of correspondences, each with an associated degree of belief."
+        </li>
+        <li>
+          "There should be no ambiguity with respect to either the source entities in the resulting alignment, or the
+          target entities."
+        </li>
+        <li>
+          "If alternative choices of correspondences exist, the selection is based on the combined, or joint degree of
+          belief of both agents."
+        </li>
+        <li>
+          "No correspondences should be selected where their joint degree of belief is less than some defined
+          admissibility threshold."
+        </li>
+        <li>
+          "The alignment should be generated by disclosing as few beliefs as possible."
+        </li>
+      </ol>
+      <p>
+        The paper then proceeds to give an example implemetation between two agents, named Alice and Bob, with
+        illustrative tables and figures for the correspondences and negotionation sequence and associated degrees of
+        belief and how they map between ontological entities.
+      </p>
+      <p>
+        While reading the paper, I had two main concerns. One being that I obviously do not know how I can practically
+        implement this. The second was that I had concern that the paper is from 2014, and I kept thinking how it
+        relates to the present, and where CID falls among the recent agent communication protocols. I recently learnt
+        about the Agent 2 Agent (A2A) communication protocol, and at the time of writing this page, I have a challenge
+        at work to develop an LLM-based agent using A2A protocol, so I am highly focused on my need to learn more about
+        it.
+      </p>
+      <p>
+        To tackle the second concern at least, I did a quick research from which I learnt that CID and A2A are from very
+        different eras, assumptions and technical motivations, and the relationship can be understood as conceptual
+        lineage. While CID is an early, formal and logic-based negotiation protocol that was designed for symbolic
+        agents to exchange beliefes about ontology correspondences, A2A is by contrast a modern, LLM-driven
+        communication paradigm, in which agents coordinae using natural language, implicit reasoning, and learned
+        representations.
+      </p>
+      <p>
+        I then started thinking that maybe logic-based protocols, like CID can be integrated with A2A to provide a
+        semantic layer to agent communications, constructing a guardrail for multi-agent syestems, and idea that I had
+        from the previous <a href="../../krr/krr.html">Knowledge Representation and Reasoning module</a>, and that I
+        have pointed to in one of my peer responses on the first collaborative discussion during <a
+          href="ia-unit2.html">Unit 2</a>. I looked up any research on possible integration between CID and A2A, and
+        found none that is specifically on the topic. However, I found an interesting paper on the use of logic
+        formalisation on top of a multi-agent system (MAS) built for cross-domain art translation (Matanski <i>et
+          al.</i>, 2025), which was also interesting for given it tackles the use for intelligent agents in the artistic
+        practices, a domain which I intend to pursue after my master's degree. To sum up, I'm still not sure whether the
+        lack of reasearch on possible integration between CID and A2A is a reasearch gap or a question that has become
+        simply outdated, but that in itself is a question to be further explored.
+      </p>
+      <br>
+      <b>Reference List</b>
+      <p>
+        Matanski, V. et al. (2025) ‘Ontology-Driven Multi-Agent System for Cross-Domain Art Translation’, <i>Future
+          Internet</i>, 17(11), pp. 517–517. Available at: https://doi.org/10.3390/fi17110517.
+      </p>
+      <p>
+        Payne, T.R. and Tamma, V. (2014) ‘Negotiating over Ontological Correspondences with Asymmetric and Incomplete
+        Knowledge’, in <i>AAMAS ’14: Proceedings of the 2014 international conference on Autonomous agents and
+          multi-agent systems</i>. Richland, SC: International Foundation for Autonomous Agents and Multiagent Systems,
+        pp. 517–524. Available at: https://dl.acm.org/doi/10.5555/2615731.2615816 (Accessed: 28 February 2026).
+      </p>
+      <p>
+        Searle, J.R. (1969) <i>Speech Acts: An Essay in the Philosophy of Language</i>. Cambridge University Press, pp.
+        1–53.
+      </p>
+    </section>
+
+    <section class="content">
+      <h2>Artefacts</h2>
+      <h3>Collaborative Discussion 2</h3>
+      <p>
+        This week also included the start of the second collaborative discussion. The prompt was to answer the question,
+        'What are the potential advantages and disadvantages of the use of agent communication languages such as KQML?
+        How do they compare with method invocation in Python or Java?' Below I share my initial post.
+      </p>
+      <h4>Initial Post</h4>
+      <p>
+        Agent Communication Languages (ACLs), like KQML, are designed for heterogenous, autonomous, knowledge-based
+        agents in distributed environments that do not assume shared code structure or known interfaces, while method
+        invocation in Python or Java requires shared code structures and known interfaces (Mayfield, Labrou and Finin,
+        2005).
+      </p>
+      <p>
+        The contrast can be drawn parallel to an analogy of making request within the same organisation, where the
+        sender of the request knows exactly who should perform the request, pulling which strings in the organisation's
+        operation workflow, as opposed to sending a request to another independent organisation, informing it of the
+        intent and the goal, and leaving the way of execution to be evaluated by that independent organisation according
+        to its own operations and rules. The first represents how method invocation works, while the latter represents
+        how ACLs and KQML work.
+      </p>
+      <p>
+        Therefore, KQML is a communication protocol that is based on agent intent, rather than being a direct procedural
+        execution method. This allows multi-agent systems (MAS) that are built on KQML to be autonomous and
+        interoperable in distributed environments (Mayfield, Labrou and Finin, 2005), allowing for flexibility in
+        coordination rooted on their dependency on semantics rather than sticking to strict syntax, and counting for
+        heterogeneity of agents' code bases (Finin et al., 1994).
+      </p>
+      <p>
+        However, ACLs, being based on the theory of Speech Acts, with their full promised full flexibility remains
+        tricky to achieve. The first reason - and disadvantage - is that they require a symmetric, shared ontology
+        between agents for the communication to be effective and correct. Without such shared ontology, communication
+        may yield incorrect agent interpretations for performatives (like implement, tell, achieve... etc.). There is an
+        accumulative body of research that aimed to deal with asymmetric agents that do not have a shared ontology, but
+        the implementations of these approaches add to the technical burden of engineering fully communicable agents in
+        ACLs (Finin et al., 1994). There is also an initial technical burden in formalising the logic of the
+        communication and all of their ontological references in a way that guarantees consistent interpretation across
+        implementations (Mayfield, Labrou and Finin, 2005).
+      </p>
+      <p>
+        To sum up, ACLs and KQML were a step in the right direction of establishing a way for communication among
+        heterogenous agents, but they had their challenges that mainly stem from their dependency on logic
+        formalisation. I believe that those shortcomings were dealt with - or rather skipped - by the recent agent
+        communication protocols that are dependent on natural language models, rather than logic formalisation, like
+        Agent 2 Agent (A2A) protocol (Agent Network Protocol (ANP), 2024), about which I look forward to learning more
+        in the near future.
+      </p>
+      <b>Reference List</b>
+      <p>
+        Agent Network Protocol (ANP) (2024) Agent Description Protocol Specification, Agentnetworkprotocol.com.
+        Available at: https://agentnetworkprotocol.com/en/specs/07-anp-agent-description-protocol-specification/
+        (Accessed: 28 February 2026)
+      </p>
+      <p>
+        Finin, T. et al. (1994) ‘KQML as an Agent Communication Language’, in <i>Proceedings of the Third International
+          Conference on Information and Knowledge Management. Conference on Information and Knowledge Management</i>,
+        New York, NY, USA: Association for Computing Machinery, pp. 456–463. Available at:
+        https://doi.org/10.1145/191246.191322.
+      </p>
+      <p>
+        Mayfield, J., Labrou, Y. and Finin, T. (2005) ‘Evaluation of KQML as an Agent Communication Language’, in
+        <i>Intelligent Agents II: Agent Theories, Architectures, and Languages. IJCAI’95-ATAL Workshop</i>, Berlin,
+        Heidelberg: Springer.
+      </p>
+    </section>
+
+    <nav class="tab-bar">
+      <ul class="tab-bar__tabs">
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="ia-unit4.html" aria-label="Previous Unit">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--prev" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Previous</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="../../msc-ai.html" aria-label="Back to MSc AI">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--back-msc" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 6h16v12c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6z"></path>
+                <path d="M4 10h16M8 6V4c0-.6.4-1 1-1h6c.6 0 1 .4 1 1v2M9 14h2M9 18h2M13 14h2M13 18h2"></path>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">MSc AI</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="../intelligent-agents.html"
+            aria-label="Back to Knowledge Representation and Reasoning Module">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--back-module" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <line x1="9" y1="7" x2="15" y2="7"></line>
+                <line x1="9" y1="12" x2="15" y2="12"></line>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Module</span>
+          </a>
+        </li>
+        <li class="tab-bar__tab">
+          <a class="tab-bar__tab-link" href="#next" data-disabled="true" aria-label="Next Unit">
+            <svg class="tab-bar__tab-icon tab-bar__tab-icon--next" viewBox="0 0 24 24" width="24px" height="24px"
+              aria-hidden="true">
+              <g class="tab-bar__tab-icon-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </g>
+            </svg>
+            <span class="tab-bar__tab-name">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer class="portfolio-footer">
+      <div class="footer-content">
+        <div class="footer-text">
+          <a href="https://github.com/IslamSalahuddin/islamsalahuddin.github.io" target="_blank"
+            rel="noopener noreferrer" class="footer-creator-link">Created by Islam Salahuddin</a><span
+            class="footer-version">v1.0.1</span>
+        </div>
+        <div class="footer-social-links">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/islamsalahuddin/" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link linkedin" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.814 0-9.737h3.554v1.377c.43-.664 1.201-1.608 2.923-1.608 2.134 0 3.734 1.394 3.734 4.391l-.001 5.577zM5.337 8.855c-1.144 0-1.915-.758-1.915-1.705 0-.955.77-1.702 1.96-1.702 1.188 0 1.914.747 1.939 1.702 0 .947-.751 1.705-1.984 1.705zm1.676 11.597H3.655V9.715h3.358v10.737zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/IslamSalahuddin" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link github" title="GitHub">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <!-- Behance -->
+          <a href="https://www.behance.net/islamsalahuddin1" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link behance" title="Behance">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M22 7h-7V5.5h7V7zm1.726 10c0-3.649-2.909-6.5-6.5-6.5.676 0-6.5 0-6.5 0s-5.818 0-5.818 5.999 2.393 6.5 5.818 6.5c3.425 0 4.178-1.713 4.729-2.92h-2.009c-.253.537-.949 1.156-2.72 1.156-2.08 0-3.647-1.496-3.647-3.54s1.567-3.537 3.647-3.537c1.771 0 2.469.617 2.72 1.154h2.009C17.904 17.285 17.151 15.572 13.726 15.572zm-8.424 2.744h-4.167c0 1.34 1.023 2.338 2.295 2.338 1.272 0 2.295-.998 2.295-2.338l-1.423.017zm5.901-3.87c.562 0 1.016.502 1.016 1.12s-.454 1.12-1.016 1.12h-3.853v-2.24h3.853z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@KafChi_AR" target="_blank" rel="noopener noreferrer"
+            class="footer-social-link youtube" title="YouTube">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:islamsalahuddin8@gmail.com" class="footer-social-link email" title="Email">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
