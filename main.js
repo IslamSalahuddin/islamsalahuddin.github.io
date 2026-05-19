@@ -1,11 +1,13 @@
 // Add any JS for interactivity if needed
 
 // Chip click functionality
-$(function () {
-  $('.skills-chips .chip').on("click", function () {
-    $(this).toggleClass("chip--active");
+if (typeof $ !== 'undefined') {
+  $(function () {
+    $('.skills-chips .chip').on("click", function () {
+      $(this).toggleClass("chip--active");
+    });
   });
-});
+}
 
 // Module Item Carousel - Only run if jQuery is available
 if (typeof $ !== 'undefined') {
@@ -425,4 +427,51 @@ class TabBar {
 // Initialize tab bar when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   new TabBar('.tab-bar');
+});
+
+// Data Guy Projects Carousel (vanilla JS, no Bootstrap/jQuery)
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.getElementById('dgProjCarousel');
+  if (!carousel) return;
+
+  const track = carousel.querySelector('.dg-proj-track');
+  const pages = carousel.querySelectorAll('.dg-proj-page');
+  const prevBtn = carousel.querySelector('.dg-proj-prev');
+  const nextBtn = carousel.querySelector('.dg-proj-next');
+  const dots = carousel.querySelectorAll('.dg-proj-dot');
+  const totalPages = pages.length;
+  let currentPage = 0;
+
+  function update() {
+    track.style.transform = `translateX(${currentPage * -100}%)`;
+    prevBtn.disabled = currentPage === 0;
+    nextBtn.disabled = currentPage === totalPages - 1;
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === currentPage));
+  }
+
+  prevBtn.addEventListener('click', function() {
+    if (currentPage > 0) { currentPage--; update(); }
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages - 1) { currentPage++; update(); }
+  });
+
+  dots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() { currentPage = i; update(); });
+  });
+
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  carousel.addEventListener('touchend', function(e) {
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && currentPage < totalPages - 1) { currentPage++; update(); }
+      else if (diff < 0 && currentPage > 0) { currentPage--; update(); }
+    }
+  }, { passive: true });
+
+  update();
 });
