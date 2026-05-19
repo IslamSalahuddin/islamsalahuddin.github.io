@@ -2098,35 +2098,35 @@ button.btn.inactive:focus,
 }
 
 /* --- Data Guy Projects Carousel (no Bootstrap, no jQuery) --- */
-.dg-proj-carousel {
+.proj-carousel {
   margin: 1.5rem 0 0.5rem;
 }
 
-.dg-proj-main {
+.proj-main {
   display: flex;
   align-items: stretch;
   gap: 0.25rem;
 }
 
-.dg-proj-track-wrapper {
+.proj-track-wrapper {
   overflow: hidden;
   flex: 1;
   min-width: 0;
 }
 
-.dg-proj-track {
+.proj-track {
   display: flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.dg-proj-page {
+.proj-page {
   flex: 0 0 100%;
   display: flex;
   gap: 0.75rem;
   box-sizing: border-box;
 }
 
-.dg-proj-card {
+.proj-card {
   flex: 1;
   min-width: 0;
   display: flex;
@@ -2141,26 +2141,26 @@ button.btn.inactive:focus,
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dg-proj-card:hover {
+.proj-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(44, 49, 54, 0.12);
   color: inherit;
   text-decoration: none;
 }
 
-.dg-proj-card-img {
+.proj-card-img {
   width: 100%;
   height: 155px;
   object-fit: cover;
   display: block;
 }
 
-.dg-proj-card-body {
+.proj-card-body {
   padding: 0.85rem;
   flex: 1;
 }
 
-.dg-proj-card-roles {
+.proj-card-roles {
   display: block;
   font-size: 0.68rem;
   color: #b97552;
@@ -2170,7 +2170,7 @@ button.btn.inactive:focus,
   margin-bottom: 0.25rem;
 }
 
-.dg-proj-card-date {
+.proj-card-date {
   display: block;
   font-size: 0.75rem;
   color: #999;
@@ -2178,7 +2178,7 @@ button.btn.inactive:focus,
   font-weight: 500;
 }
 
-.dg-proj-card-title {
+.proj-card-title {
   color: #2C3136;
   font-size: 0.88rem;
   font-weight: 600;
@@ -2186,14 +2186,14 @@ button.btn.inactive:focus,
   line-height: 1.3;
 }
 
-.dg-proj-card-text {
+.proj-card-text {
   color: #5a5a5a;
   font-size: 0.8rem;
   line-height: 1.5;
   margin: 0;
 }
 
-.dg-proj-card-footer {
+.proj-card-footer {
   padding: 0.55rem 0.85rem;
   border-top: 1px solid rgba(44, 49, 54, 0.08);
   display: flex;
@@ -2204,22 +2204,22 @@ button.btn.inactive:focus,
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dg-proj-card:hover .dg-proj-card-footer {
+.proj-card:hover .proj-card-footer {
   background: #b97552;
   color: #fff;
 }
 
-.dg-proj-card-footer svg {
+.proj-card-footer svg {
   fill: #5a5a5a;
   flex-shrink: 0;
   transition: fill 0.3s ease;
 }
 
-.dg-proj-card:hover .dg-proj-card-footer svg {
+.proj-card:hover .proj-card-footer svg {
   fill: #fff;
 }
 
-.dg-proj-btn {
+.proj-btn {
   flex-shrink: 0;
   background: none;
   border: none;
@@ -2233,29 +2233,29 @@ button.btn.inactive:focus,
   transition: opacity 0.3s ease;
 }
 
-.dg-proj-btn:hover:not(:disabled) {
+.proj-btn:hover:not(:disabled) {
   opacity: 1;
 }
 
-.dg-proj-btn:disabled {
+.proj-btn:disabled {
   opacity: 0.2;
   cursor: not-allowed;
 }
 
-.dg-proj-btn svg {
+.proj-btn svg {
   fill: #b97552;
   width: 26px;
   height: 26px;
 }
 
-.dg-proj-dots {
+.proj-dots {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 0.9rem;
 }
 
-.dg-proj-dot {
+.proj-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -2266,25 +2266,25 @@ button.btn.inactive:focus,
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.dg-proj-dot.active {
+.proj-dot.active {
   background: #b97552;
   transform: scale(1.3);
 }
 
 @media (max-width: 767px) {
-  .dg-proj-btn { display: none; }
-  .dg-proj-dots { display: none; }
-  .dg-proj-track-wrapper { overflow: visible; }
-  .dg-proj-track {
+  .proj-btn { display: none; }
+  .proj-dots { display: none; }
+  .proj-track-wrapper { overflow: visible; }
+  .proj-track {
     flex-direction: column;
     transform: none !important;
     gap: 1rem;
   }
-  .dg-proj-page {
+  .proj-page {
     flex-direction: column;
     gap: 1rem;
   }
-  .dg-proj-card-img { height: 180px; }
+  .proj-card-img { height: 180px; }
 }
 
 .tutorials-section .carousel-item {
