@@ -3176,3 +3176,176 @@ main {
     padding-bottom: calc(65px + 1rem);
   }
 }
+
+/* =========================================================================
+   Dissertation Timeline (Gantt) — namespaced .dtl-*  [added]
+   Self-contained component for msc-ai/dissertation/dissertation.html.
+   Reuses the site palette (#b97552 terracotta, #34495e slate, teal #43AA8B).
+   No existing selectors are modified.
+   ========================================================================= */
+.dtl {
+  margin-top: 1.25rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2C3136;
+}
+
+/* legend */
+.dtl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.25rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  font-size: 0.82rem;
+}
+.dtl-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.dtl-swatch {
+  width: 18px;
+  height: 11px;
+  border-radius: 3px;
+  flex: none;
+}
+.dtl-swatch--write { background: linear-gradient(90deg, #b97552 0%, #d4a373 100%); }
+.dtl-swatch--build { background: linear-gradient(90deg, #43AA8B 0%, #389a7a 100%); }
+.dtl-swatch--present { background: linear-gradient(90deg, #6ea6ff 0%, #8e7cc3 100%); }
+.dtl-swatch--milestone {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #34495e;
+  transform: rotate(45deg);
+}
+.dtl-swatch--today {
+  width: 0;
+  height: 14px;
+  border-left: 2px dashed #e0a3a0;
+  background: none;
+  border-radius: 0;
+}
+
+/* chart root holds the shared --dtl-today custom property (set by main.js) */
+.dtl-chart { position: relative; }
+
+/* month axis header */
+.dtl-axis {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  margin-bottom: 8px;
+}
+.dtl-axis-spacer { grid-column: 1; }
+.dtl-axis-months {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.dtl-axis-months span {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #6b6b6b;
+  border-left: 1px solid rgba(46, 58, 89, 0.12);
+  padding: 2px 0;
+}
+.dtl-axis-months span:first-child { border-left: none; }
+
+/* generic row = label column + track */
+.dtl-row,
+.dtl-mrow {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  align-items: center;
+}
+.dtl-row + .dtl-row { margin-top: 6px; }
+.dtl-rowlabel {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  padding-right: 0.75rem;
+  text-align: right;
+  color: #2C3136;
+}
+
+/* milestone lane */
+.dtl-mrow { margin-bottom: 10px; }
+.dtl-mtrack { position: relative; height: 20px; }
+.dtl-flag {
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #34495e;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  cursor: default;
+}
+.dtl-flag--major {
+  width: 15px;
+  height: 15px;
+  background: #b97552;
+}
+
+/* phase tracks */
+.dtl-track {
+  position: relative;
+  height: 26px;
+  background: #faf6f1;
+  border-radius: 6px;
+  /* nine equal month gridlines */
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(46, 58, 89, 0.09) 0,
+    rgba(46, 58, 89, 0.09) 1px,
+    transparent 1px,
+    transparent calc(100% / 9)
+  );
+}
+.dtl-bar {
+  position: absolute;
+  top: 4px;
+  height: 18px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  background: linear-gradient(90deg, #b97552 0%, #d4a373 100%);
+  box-shadow: 0 2px 6px rgba(44, 49, 54, 0.14);
+}
+.dtl-bar--build { background: linear-gradient(90deg, #43AA8B 0%, #389a7a 100%); }
+.dtl-bar--present { background: linear-gradient(90deg, #6ea6ff 0%, #8e7cc3 100%); }
+
+/* shared "today" line, driven by --dtl-today (default off-canvas) */
+.dtl-track::before,
+.dtl-mtrack::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: var(--dtl-today, -9999px);
+  width: 0;
+  border-left: 2px dashed #e0a3a0;
+  z-index: 4;
+  pointer-events: none;
+}
+.dtl-note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+}
+
+@media (max-width: 600px) {
+  .dtl-axis,
+  .dtl-row,
+  .dtl-mrow { grid-template-columns: 96px 1fr; }
+  .dtl-rowlabel { font-size: 0.68rem; }
+  .dtl-bar { font-size: 0.6rem; }
+}
