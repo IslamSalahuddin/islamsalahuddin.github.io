@@ -3349,3 +3349,60 @@ main {
   .dtl-rowlabel { font-size: 0.68rem; }
   .dtl-bar { font-size: 0.6rem; }
 }
+
+/* ============================================================
+   Weekly Journal (dissertation page) - wj-* namespace.
+   Collapsible week entries built on native <details>/<summary>
+   (no JavaScript needed). To add a week, copy one
+   <details class="wj-week"> ... </details> block in the HTML.
+   ============================================================ */
+.wj {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.wj-week {
+  background: #faf6f1;
+  border: 1px solid rgba(46, 58, 89, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.wj-week > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #2C3136;
+  transition: background 0.15s ease;
+}
+.wj-week > summary::-webkit-details-marker { display: none; }
+.wj-week > summary:hover { background: #f3e9df; }
+.wj-date {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: #6b6b6b;
+}
+.wj-week > summary::after {
+  content: "";
+  margin-left: auto;
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #b97552;
+  border-bottom: 2px solid #b97552;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.wj-week[open] > summary { background: #f3e9df; }
+.wj-week[open] > summary::after { transform: rotate(-135deg); }
+.wj-week > p {
+  margin: 0;
+  padding: 0.25rem 1rem 1rem;
+  color: #4a4f55;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
