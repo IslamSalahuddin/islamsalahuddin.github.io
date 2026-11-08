@@ -359,6 +359,121 @@
           </p>
         </details>
 
+        <details class="wj-week">
+          <summary>Week 11 <span class="wj-date">6 - 12 Oct 2026</span></summary>
+          <p>
+            This week I started diagnosing why the first fine-tuning run failed. Before spending more money, I built a
+            probe, which is a test with no training. It compares the 7B model as I had trained it, the same model
+            without compression, and the larger 34B model, on how well each predicts real classical verse by other
+            Abbasid poets. I also marked twenty untuned samples blind. Compression was not the problem, but size
+            mattered. The untuned 7B actually wrote coherent Arabic most of the time, so my fine-tuning had damaged the
+            language the model already had, which was hard to accept.
+          </p>
+          <p>
+            A prompt test followed. Naming the classical form in the instruction barely helped, and naming the poet made
+            things worse, with chatbot disclaimers and a proverb passed off as his verse. On 8 Oct I decided to train
+            the 34B on al-Ma'arri alone on an A100. After one epoch it had learned the form, with 15 of 60 poems
+            rhyming fully against 1 of 60 untuned, but it lost the sense: only 1 of 20 plain samples was coherent,
+            against 16 for the untuned model. The rule I had written beforehand now points to the expensive two-stage
+            run, which worries me given how little time is left.
+          </p>
+          <p>
+            Before committing to it, I wanted to test one more idea: that metre is carried by short vowels, which bare
+            text hides. I collected vowelled verse from poetry websites and an automatic diacritiser, and checked twenty
+            verses blind. The scansion tool I was using to fix the marks turned out to make verses worse (10 worse, 6
+            the same, none better), so I took its editing rights away. I then started a pilot, Run 2b, on fully
+            vowelled text on 11 Oct.
+          </p>
+        </details>
+
+        <details class="wj-week">
+          <summary>Week 12 <span class="wj-date">13 - 19 Oct 2026</span></summary>
+          <p>
+            I was in London on a business trip from 12 to 22 Oct, so I didn't have time to do anything on the project
+            this week. Run 2b had finished training on the 11th, but its sixty outputs sat unmarked. I'm worried about
+            the schedule: the fine-tuning and stimulus phase was due to end on 18 Oct, and I still don't have a working
+            generator.
+          </p>
+        </details>
+
+        <details class="wj-week">
+          <summary>Week 13 <span class="wj-date">20 - 26 Oct 2026</span></summary>
+          <p>
+            I got back on 22 Oct and went straight back to the model, with more than a week of lost time. I marked the
+            sixty outputs of Run 2b blind beside Run 2's, and the vowels had not helped. Neither run produced a single
+            fully metrical output, and Run 2b wrote no coherent output at all against six for Run 2, so I closed the
+            pilot and went back to bare text. A cheap last test, naming the metre in the prompt, also failed: none of
+            150 outputs was metrical. So I committed to the two-stage run.
+          </p>
+          <p>
+            I built the first-stage corpus from KITAB: 84,516 cleaned verses by 49 Abbasid poets. That took writing
+            rules for missing words, merged lines and misaligned poems, and raising the cap per poet from 1,000 to 3,000
+            verses to give the model more to learn from. Run 3 ran on the A100 from 24 to 26 Oct. Stage 1 crashed from
+            memory fragmentation three-quarters of the way through, which cost about 18 compute units before I could
+            resume from a checkpoint. The result was the same floor as before: 7 consistent outputs in 60, against the
+            15 I needed, after about 57 units in total.
+          </p>
+          <p>
+            The loss had flattened early in both stages, which told me that eight times the data was not the missing
+            piece. I wrote to my supervisor proposing to pivot to asking why metre is so hard for these models, and
+            started looking for other generators in case the study had to continue. I'm now well behind my plan, and the
+            expert panel phase was supposed to start on the 19th.
+          </p>
+        </details>
+
+        <details class="wj-week">
+          <summary>Week 14 <span class="wj-date">27 Oct - 2 Nov 2026</span></summary>
+          <p>
+            Before taking the pivot further, I tried one last route that keeps the study as designed: Fanar-2-Diwan, a
+            poetry model from QCRI that was already trained on 118 thousand labelled poems. It wouldn't even load until
+            I pinned its original code and an older library version. Then it worked, which was a welcome surprise: 22 of
+            30 outputs held one metre, against 21 of 30 for real verse. Fanar takes no instruction, so I redesigned
+            generation around it. Each excerpt is now seeded with one verse from an authentic excerpt, and the poems of
+            those seeds are withheld from fine-tuning.
+          </p>
+          <p>
+            I had Fanar label the whole Diwan with metre, topic and rhyme tags, and I corrected 23 rhyme letters myself.
+            The first fine-tune ran out of memory, and my monitor proved too noisy, because the same model scored 22 of
+            30 on one GPU and 16 of 30 on another, so I doubled the sample. The full fine-tune ran on 30 Oct and for the
+            first time wrote al-Ma'arri's language and metre at once. But reading the candidates showed that seeding
+            doesn't carry the view: the model kept writing his default voice, and only 14 of 191 candidates were both
+            on-view and coherent.
+          </p>
+          <p>
+            On 31 Oct I narrowed the study to one view, optimism against pessimism, which is a significant departure
+            from
+            my design. My training monitor was also measuring poem length instead of metre, so I rebuilt its rule around
+            two verses and reran the trial. On 1 and 2 Nov I read all 285 candidates by hand and built a pool of 19
+            eligible excerpts, which is thin for the five per side I need.
+          </p>
+        </details>
+
+        <details class="wj-week">
+          <summary>Week 15 <span class="wj-date">3 - 9 Nov 2026</span></summary>
+          <p>
+            This was a long week of filtering the pool. I ran four automated checks: fluency, metre and rhyme, rare
+            words, and copying. The surprise was fluency: the generated excerpts are far more predictable to the
+            language model than the real ones, not less fluent, so I'm declaring it as a limitation instead of gating
+            on it. I found and fixed bugs in the rare-word check and in how words split across the line break were read,
+            added a word-length band, and dropped two matching rules that no longer made sense with one view. I'm
+            conscious that several rules changed after I saw results, so I'm logging every one for the thesis.
+          </p>
+          <p>
+            The hardest part was vocalising the excerpts by hand, which showed broken half-lines in excerpts that had
+            passed every automated check. I dropped 8 candidates and reworded 10 of the 11 I kept, by up to a third of
+            their words, so the generated side is really a model draft plus my own rewrite. I also chose the ten
+            authentic excerpts myself. By 6 Nov the twenty excerpts existed. I then finished the gloss sheet and the
+            quiz questions, and started building the study platform, with the Arabic texts and a working engine that a
+            scripted browser has already tested end to end.
+          </p>
+          <p>
+            Tryin to catch up, I pushed myself to rent and set up a domain and a server. I got the platform to staging
+            and then deployment. I deployed the panelists view of the platform and generated three links to send to the
+            panelists, with the first link to send tomorrow. If I was lucky to get a response from the panelists this
+            week, maybe I would be able to catch up with my oringinal timeline.
+          </p>
+        </details>
+
 
       </div>
     </section>
